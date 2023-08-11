@@ -84,7 +84,9 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "wine_store.users",
-    # Your stuff: custom apps go here
+    "wine_store.orders",
+    "wine_store.products",
+    "wine_store.cart",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
