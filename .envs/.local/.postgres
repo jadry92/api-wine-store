@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=wine_store
+POSTGRES_USER=SvuCYfHrKizkDqgiPnEJGDOYXmPRBOgU
+POSTGRES_PASSWORD=wPKS5SuYFMcABMA7dILvGrrxtgRG4DUELDCcMFxw1ERTZnmMkDXDMVayXHh6dbak
