@@ -1,16 +1,34 @@
+# dj_rest_auth
+from dj_rest_auth.registration.serializers import RegisterSerializer
+
+# Django
 from django.contrib.auth import get_user_model
+
+# Rest Framework
 from rest_framework import serializers
 
-from wine_store.users.models import User as UserType
+# User
+from wine_store.users.models import UserAddress
 
 User = get_user_model()
 
 
-class UserSerializer(serializers.ModelSerializer[UserType]):
-    class Meta:
-        model = User
-        fields = ["username", "name", "url"]
+class RegisterSerializerCustom(RegisterSerializer):
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
 
-        extra_kwargs = {
-            "url": {"view_name": "api:user-detail", "lookup_field": "username"},
+    def get_cleaned_data(self):
+        return {
+            "username": self.validated_data.get("username", ""),
+            "password1": self.validated_data.get("password1", ""),
+            "email": self.validated_data.get("email", ""),
+            "first_name": self.validated_data.get("first_name", ""),
+            "last_name": self.validated_data.get("last_name", ""),
         }
+
+
+class UserAddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserAddress
+        fields = "__all__"
+        read_only_fields = ["user"]

@@ -20,8 +20,8 @@ class User(AbstractUser):
 
     # First and last name do not cover name patterns around the globe
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
-    first_name = None  # type: ignore
-    last_name = None  # type: ignore
+    first_name = models.CharField(_("First Name"), blank=True, max_length=255)
+    last_name = models.CharField(_("Last Name"), blank=True, max_length=255)
 
     def get_absolute_url(self) -> str:
         """Get URL for user's detail view.
@@ -38,7 +38,7 @@ class UserAddress(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     address_line_1 = models.CharField(max_length=255)
-    address_line_2 = models.CharField(max_length=255)
+    address_line_2 = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
     zipcode = models.CharField(max_length=255)

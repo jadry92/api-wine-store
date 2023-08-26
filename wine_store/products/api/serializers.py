@@ -10,7 +10,7 @@ from rest_framework import serializers
 from wine_store.products.models import Product
 
 
-class ProductSerializer(serializers.ListSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ("id", "name", "price", "stock", "image")
+        fields = "__all__"

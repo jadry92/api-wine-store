@@ -14,6 +14,20 @@ from django.utils.translation import gettext_lazy as _
 from wine_store.users.models import User
 
 
+class ProductInventory(models.Model):
+    """ProductInventory model."""
+
+    quantity = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        """Meta options."""
+
+        verbose_name = _("Product Inventory")
+        verbose_name_plural = _("Product Inventories")
+
+
 class ProductDiscount(models.Model):
     """ProductDiscount model."""
 
@@ -46,7 +60,9 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_available = models.BooleanField(default=True)
-    discout = models.ForeignKey(ProductDiscount, on_delete=models.SET_NULL, null=True, blank=True)
+    discount = models.ForeignKey(ProductDiscount, on_delete=models.SET_NULL, null=True, blank=True)
+    inventory = models.OneToOneField(ProductInventory, on_delete=models.CASCADE)
+    total_rating = models.FloatField(default=0, null=True, blank=True)
 
     class Meta:
         """Meta options."""
@@ -59,32 +75,13 @@ class Product(models.Model):
         return self.name
 
 
-class ProductInventory(models.Model):
-    """ProductInventory model."""
-
-    product = models.OneToOneField(Product, on_delete=models.CASCADE)
-    quantity = models.IntegerField(default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        """Meta options."""
-
-        verbose_name = _("Product Inventory")
-        verbose_name_plural = _("Product Inventories")
-
-    def __str__(self):
-        """Return product name."""
-        return self.product.name
-
-
 class ProductReview(models.Model):
     """ProductReview model."""
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.TextField()
-    rating = models.IntegerField(default=0)
+    rating = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

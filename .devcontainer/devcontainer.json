@@ -19,7 +19,7 @@
       "type": "bind"
     }
   ],
-  "overrideCommand": true,
+  "overrideCommand": false,
   "service": "django",
   "remoteUser": "dev-user",
   "workspaceFolder": "/app",

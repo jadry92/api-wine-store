@@ -1,28 +1,25 @@
+# django
 from django.contrib.auth import get_user_model
-from rest_framework import status
-from rest_framework.decorators import action
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, UpdateModelMixin
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.viewsets import GenericViewSet
+
+# rest_framework
+from rest_framework.viewsets import ModelViewSet
+
+from wine_store.users.api.permissions import IsAddressOwner
 
 # users
-from wine_store.users.api.serializers import UserSerializer
+from wine_store.users.api.serializers import UserAddressSerializer
+from wine_store.users.models import UserAddress
 
 User = get_user_model()
 
 
-class UserViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, GenericViewSet):
-    serializer_class = UserSerializer
-    queryset = User.objects.all()
-    lookup_field = "username"
-    permission_classes = [IsAuthenticated]
+class UserAddressViewSet(ModelViewSet):
+    serializer_class = UserAddressSerializer
+    permission_classes = [IsAuthenticated, IsAddressOwner]
 
-    def get_queryset(self, *args, **kwargs):
-        assert isinstance(self.request.user.id, int)
-        return self.queryset.filter(id=self.request.user.id)
+    def get_queryset(self):
+        return UserAddress.objects.filter(user=self.request.user)
 
-    @action(detail=False)
-    def me(self, request):
-        serializer = UserSerializer(request.user, context={"request": request})
-        return Response(status=status.HTTP_200_OK, data=serializer.data)
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
