@@ -1,14 +1,112 @@
 [
   {
+    "model": "products.productdiscount",
+    "pk": 1,
+    "fields": {
+      "name": "10% off",
+      "description": "10% off",
+      "discount_percent": 10.0,
+      "active": true,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.productdiscount",
+    "pk": 2,
+    "fields": {
+      "name": "fathers day",
+      "description": "fathers day",
+      "discount_percent": 20.0,
+      "active": false,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.productdiscount",
+    "pk": 3,
+    "fields": {
+      "name": "christmas",
+      "description": "christmas",
+      "discount_percent": 30.0,
+      "active": false,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.productdiscount",
+    "pk": 4,
+    "fields": {
+      "name": "black friday",
+      "description": "black friday",
+      "discount_percent": 40.0,
+      "active": false,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.productdiscount",
+    "pk": 5,
+    "fields": {
+      "name": "cyber monday",
+      "description": "cyber monday",
+      "discount_percent": 50.0,
+      "active": false,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
     "model": "products.product",
     "pk": 1,
     "fields": {
       "name": "Syrah Cayuse",
       "description": "In a stunning lineup of Cayuse Syrahs, the En Chamberlin wins by a nose. It's smooth and silky, with a tongue-bending blend of flavors that include blood and iron, umami and salt, at first overtaking the pure fruit, but adding tremendous depth and power. The endless finish unfolds into a wine with exotic spices and complex layering.",
       "price": 65.0,
-      "SKU": 4520891122716,
+      "SKU": 6911115439454,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 1,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 1,
+    "fields": {
+      "quantity": 2,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "In a stunning lineup of Cayuse Syrahs, the En Chamberlin wins by a nose. It's smooth and silky, with a tongue-bending blend of flavors that include blood and iron, umami and salt, at first overtaking the pure fruit, but adding tremendous depth and power. The endless finish unfolds into a wine with exotic spices and complex layering.",
+      "price": 65.0,
+      "SKU": 9236071200304,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 2,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 2,
+    "fields": {
+      "quantity": 55,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -17,12 +115,24 @@
     "model": "products.product",
     "pk": 3,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "In a stunning lineup of Cayuse Syrahs, the En Chamberlin wins by a nose. It's smooth and silky, with a tongue-bending blend of flavors that include blood and iron, umami and salt, at first overtaking the pure fruit, but adding tremendous depth and power. The endless finish unfolds into a wine with exotic spices and complex layering.",
-      "price": 65.0,
-      "SKU": 7696794842846,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "A spectacular Pinot Noir, but a very young one, and extremely dry. It's a wine of great structure, with rich acids and tannins framing extraordinarily complex flavors of grilled cherries, strawberries and raspberries, with complicating notes of cola, pomegranates, orange zest, anise, dusty Asian spices and smoky sandalwood. A truly great Pinot Noir from a great vintage that needs time in the bottle to express itself. The vineyard, which is owned by the winery, is only 19 acres, planted to an array of newer and older clones. Best after 2013, if you can keep your hands off.",
+      "price": 100.0,
+      "SKU": 2683887912984,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 3,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 3,
+    "fields": {
+      "quantity": 83,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -31,12 +141,258 @@
     "model": "products.product",
     "pk": 4,
     "fields": {
+      "name": "Syrah Cayuse",
+      "description": "In a stunning lineup of Cayuse Syrahs, the En Chamberlin wins by a nose. It's smooth and silky, with a tongue-bending blend of flavors that include blood and iron, umami and salt, at first overtaking the pure fruit, but adding tremendous depth and power. The endless finish unfolds into a wine with exotic spices and complex layering.",
+      "price": 65.0,
+      "SKU": 9726265383462,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 4,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 4,
+    "fields": {
+      "quantity": 32,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Cabernet Sauvignon Shafer",
+      "description": "A perfect score has to be considered in the context of its region. Shafer's 2004 Hillside Select is tremendous as a Napa Valley Cabernet Sauvignon that competes with its peers at the highest levels. It's always a fabulous wine, but in warm 2004, Shafer's amphitheater vineyard sheltered the grapes, ripening them to perfection yet protecting the \u201ciron fist in a velvet glove\u201d structure that Andr\u00e9 Tchelistcheff defined as Stags Leap. This 100% Cabernet is tremendous in cassis, black currant and mocha flavors, and the 100% new French oak provides perfect additions of smoke and caramel. It's soft and gorgeous enough to drink now, and should age well in a cool cellar for the next 20 years.",
+      "price": 215.0,
+      "SKU": 7643942786556,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 5,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 5,
+    "fields": {
+      "quantity": 29,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
       "name": "Pinot Noir Williams Selyem",
       "description": "A spectacular Pinot Noir, but a very young one, and extremely dry. It's a wine of great structure, with rich acids and tannins framing extraordinarily complex flavors of grilled cherries, strawberries and raspberries, with complicating notes of cola, pomegranates, orange zest, anise, dusty Asian spices and smoky sandalwood. A truly great Pinot Noir from a great vintage that needs time in the bottle to express itself. The vineyard, which is owned by the winery, is only 19 acres, planted to an array of newer and older clones. Best after 2013, if you can keep your hands off.",
       "price": 100.0,
-      "SKU": 7867808752585,
+      "SKU": 7518457176921,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 6,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 6,
+    "fields": {
+      "quantity": 32,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Cabernet Blend Sloan",
+      "description": "Impossibly aromatic. Hard to imagine greater claret perfume. Shows the most refined mingling of smoky oak, cassis, cherries, roasted coconut macaroon, cocoa puff and spice scents. Absolutely first rate, as good as anything Napa Valley produces. Compellingly, addictively delicious, but so dry and voluptuous. Classic wine, with perfect alignment of fruit, acids, tannins, oak, alcohol, the works. The grapes are from Sloan's portion of the Sacrashe Vineyard, high above the Silverado Trail in the Vaca Mountains. Mostly Cabernet Sauvignon, aged in 100% new French oak. Perfection in a bottle. Drink now\u20132020.",
+      "price": 245.0,
+      "SKU": 9888473675423,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 7,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 7,
+    "fields": {
+      "quantity": 36,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Cabernet Blend Sloan",
+      "description": "Impossibly aromatic. Hard to imagine greater claret perfume. Shows the most refined mingling of smoky oak, cassis, cherries, roasted coconut macaroon, cocoa puff and spice scents. Absolutely first rate, as good as anything Napa Valley produces. Compellingly, addictively delicious, but so dry and voluptuous. Classic wine, with perfect alignment of fruit, acids, tannins, oak, alcohol, the works. The grapes are from Sloan's portion of the Sacrashe Vineyard, high above the Silverado Trail in the Vaca Mountains. Mostly Cabernet Sauvignon, aged in 100% new French oak. Perfection in a bottle. Drink now\u20132020.",
+      "price": 245.0,
+      "SKU": 9671560717207,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 8,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 8,
+    "fields": {
+      "quantity": 46,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Cabernet Sauvignon David Arthur",
+      "description": "There are incredible aromatics on this Cabernet. It's powerful yet subtle (how can that be?), all about sweet, crushed summer blackberries and pure cassis liqueur. Elaborate oak, in the form of buttered toast, is perfectly in balance, never overshadowing the fruit. The tannins are dry, rich and smooth, defining Napa elegance, grace and beauty. World class, dramatic and just about perfect, this gets better and better as it breathes in the glass. Drink now\u20132030.",
+      "price": 150.0,
+      "SKU": 2871025576299,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 9,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 9,
+    "fields": {
+      "quantity": 83,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Red Blend Colgin",
+      "description": "This is an absolutely beautiful wine to drink now, but the richness comes at the price of considerable alcohol. The color is dark and impenetrable, the aromas huge in Cabernet-inspired blackberries and black currants, with a touch of something herbal and also a stony minerality. There's also a fascinating peatiness, like an Islay Scotch. It really opens up in the glass, becoming ever more complex. It's great Napa Valley Cabernet Sauvignon, but that high alcohol may limit its ageability.",
+      "price": 290.0,
+      "SKU": 1450233351693,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 10,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 10,
+    "fields": {
+      "quantity": 57,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "A stupendous Pinot Noir, showing how beautifully this vineyard performs in the remote Sonoma Coast above Fort Ross. Williams Selyem's last few vintages of Precious Mountain have been extraordinary, but this 2009 tops them all. The wine is as light as a feather in the mouth, modest in alcohol and delicately feminine, like pure satin. However, few Pinot Noirs in the world achieve this level of concentration. Wild raspberries and cherries, cola, sleek minerals, dusty baking spices and smoky oak combine for flavors that are utterly delicious. After all that, it possesses an indefinable attribute of fascination. Will age well for a long time, if you can keep your hands off it. Now\u20132021.",
+      "price": 94.0,
+      "SKU": 4362886220929,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 11,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 11,
+    "fields": {
+      "quantity": 31,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
+      "price": 65.0,
+      "SKU": 1517855684801,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 12,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 12,
+    "fields": {
+      "quantity": 87,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
+      "price": 140.0,
+      "SKU": 4706708459141,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 13,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 13,
+    "fields": {
+      "quantity": 38,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -46,11 +402,23 @@
     "pk": 14,
     "fields": {
       "name": "Syrah Cayuse",
-      "description": "In a stunning lineup of Cayuse Syrahs, the En Chamberlin wins by a nose. It's smooth and silky, with a tongue-bending blend of flavors that include blood and iron, umami and salt, at first overtaking the pure fruit, but adding tremendous depth and power. The endless finish unfolds into a wine with exotic spices and complex layering.",
+      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
       "price": 65.0,
-      "SKU": 1658575685172,
+      "SKU": 5505222511377,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 14,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 14,
+    "fields": {
+      "quantity": 9,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -59,12 +427,128 @@
     "model": "products.product",
     "pk": 15,
     "fields": {
-      "name": "Cabernet Sauvignon Shafer",
-      "description": "A perfect score has to be considered in the context of its region. Shafer's 2004 Hillside Select is tremendous as a Napa Valley Cabernet Sauvignon that competes with its peers at the highest levels. It's always a fabulous wine, but in warm 2004, Shafer's amphitheater vineyard sheltered the grapes, ripening them to perfection yet protecting the \u201ciron fist in a velvet glove\u201d structure that Andr\u00e9 Tchelistcheff defined as Stags Leap. This 100% Cabernet is tremendous in cassis, black currant and mocha flavors, and the 100% new French oak provides perfect additions of smoke and caramel. It's soft and gorgeous enough to drink now, and should age well in a cool cellar for the next 20 years.",
-      "price": 215.0,
-      "SKU": 1390436640158,
+      "name": "Syrah Charles Smith",
+      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
+      "price": 140.0,
+      "SKU": 4885261171646,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 15,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 15,
+    "fields": {
+      "quantity": 72,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This expresses the greatness of its vintage and vineyard, offering wave after wave of raspberry and cherry pie flavors, plus notes of red currant, sweet licorice, spicy Dr. Pepper and smoky sandalwood. There's also something exotically briary and wild that intrigues. Even more remarkable is the texture, an amalgam of acids and tannins that rivals any Pinot Noir ever produced in California. It should age for up to 20 years.",
+      "price": 75.0,
+      "SKU": 8699865258082,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 16,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 16,
+    "fields": {
+      "quantity": 84,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "In a vintage that produced the finest overall lineup of Cayuse wines to date, it may seem a little nit-picky to score some higher and some lower. But the En Chamberlin deserves first place again. Brilliant aromatics of smoked meat, bacon fat and otherworldly roasted accents seduce instantly. Once on the palate, the silky, balanced, near-perfect mix of umami and fruit, plus licorice, cassis, coffee liqueur and black tea notes suggest it's as decadent as it is delicious.",
+      "price": 75.0,
+      "SKU": 8267549153752,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 17,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 17,
+    "fields": {
+      "quantity": 32,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "name": "Cabernet Sauvignon Stonestreet",
+      "description": "This is Cabernet Sauvignon lifted to greatness, an impeccable statement concerning this region of the high Mayacamas Mountains on the Sonoma side that, by law, is forced to bear a \u201cvalley\u201d appellation. The wine is awesome, vast and complex, fascinating in every aspect, yet locked down in tough tannins that exaggerate the acidity, making the wine functionally undrinkable. It is a beautiful, classic Cabernet, very near perfect, and certainly one of the successes of the vintage. Don't even think of drinking it before 2014, and it should evolve in the bottle for a good 10 years after that.",
+      "price": 75.0,
+      "SKU": 3480754038579,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 18,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 18,
+    "fields": {
+      "quantity": 10,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "name": "Cabernet Sauvignon Trefethen",
+      "description": "This is nearly perfect, a massive, monumental wine whose sheer power is matched only by its grace and refinement. The flavors of blackberries, cassis, dark chocolate, buttered toast and cedar flood the mouth, tightly controlled by firm tannins and good acidity. Decant for several hours if you open it now, but better to give it 6\u201310 years in the bottle.",
+      "price": 100.0,
+      "SKU": 5465925409930,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 19,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 19,
+    "fields": {
+      "quantity": 93,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -73,12 +557,50 @@
     "model": "products.product",
     "pk": 20,
     "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "A spectacular Pinot Noir, but a very young one, and extremely dry. It's a wine of great structure, with rich acids and tannins framing extraordinarily complex flavors of grilled cherries, strawberries and raspberries, with complicating notes of cola, pomegranates, orange zest, anise, dusty Asian spices and smoky sandalwood. A truly great Pinot Noir from a great vintage that needs time in the bottle to express itself. The vineyard, which is owned by the winery, is only 19 acres, planted to an array of newer and older clones. Best after 2013, if you can keep your hands off.",
-      "price": 100.0,
-      "SKU": 3648666673959,
+      "name": "Syrah Cayuse",
+      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
+      "price": 65.0,
+      "SKU": 8349171882096,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 20,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 20,
+    "fields": {
+      "quantity": 73,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
+      "price": 140.0,
+      "SKU": 3184032666880,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 21,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 21,
+    "fields": {
+      "quantity": 65,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -87,12 +609,24 @@
     "model": "products.product",
     "pk": 22,
     "fields": {
-      "name": "Cabernet Blend Sloan",
-      "description": "Impossibly aromatic. Hard to imagine greater claret perfume. Shows the most refined mingling of smoky oak, cassis, cherries, roasted coconut macaroon, cocoa puff and spice scents. Absolutely first rate, as good as anything Napa Valley produces. Compellingly, addictively delicious, but so dry and voluptuous. Classic wine, with perfect alignment of fruit, acids, tannins, oak, alcohol, the works. The grapes are from Sloan's portion of the Sacrashe Vineyard, high above the Silverado Trail in the Vaca Mountains. Mostly Cabernet Sauvignon, aged in 100% new French oak. Perfection in a bottle. Drink now\u20132020.",
-      "price": 245.0,
-      "SKU": 9771891884689,
+      "name": "Syrah Cayuse",
+      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
+      "price": 65.0,
+      "SKU": 6529501052368,
       "is_available": true,
-      "image": null,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 22,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 22,
+    "fields": {
+      "quantity": 15,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -101,12 +635,50 @@
     "model": "products.product",
     "pk": 23,
     "fields": {
-      "name": "Cabernet Blend Sloan",
-      "description": "Impossibly aromatic. Hard to imagine greater claret perfume. Shows the most refined mingling of smoky oak, cassis, cherries, roasted coconut macaroon, cocoa puff and spice scents. Absolutely first rate, as good as anything Napa Valley produces. Compellingly, addictively delicious, but so dry and voluptuous. Classic wine, with perfect alignment of fruit, acids, tannins, oak, alcohol, the works. The grapes are from Sloan's portion of the Sacrashe Vineyard, high above the Silverado Trail in the Vaca Mountains. Mostly Cabernet Sauvignon, aged in 100% new French oak. Perfection in a bottle. Drink now\u20132020.",
-      "price": 245.0,
-      "SKU": 8131719620391,
+      "name": "Cabernet Sauvignon Cayuse",
+      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
+      "price": 70.0,
+      "SKU": 5352362470462,
       "is_available": true,
-      "image": null,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 23,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 23,
+    "fields": {
+      "quantity": 9,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "name": "Pinot Noir Flowers",
+      "description": "A cool climate has given this wine bracing acidity and gentle-yet-persistent tannins. Its flavors of wild raspberries and cherries, with spice and mineral overtones, are delicious. There's a feral quality that expresses umami perfectly, suggesting butter-saut\u00e9ed, tamari-splashed mushrooms and crisped prosciutto. The oak is powerful and present in the form of toast and sweet vanilla, but perfectly balanced with the wine's volume. For all its richness, the wine finishes bone dry. Drink this impeccable Pinot Noir now through 2020.",
+      "price": 70.0,
+      "SKU": 1669277158863,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 24,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 24,
+    "fields": {
+      "quantity": 30,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -115,12 +687,24 @@
     "model": "products.product",
     "pk": 25,
     "fields": {
-      "name": "Cabernet Sauvignon David Arthur",
-      "description": "There are incredible aromatics on this Cabernet. It's powerful yet subtle (how can that be?), all about sweet, crushed summer blackberries and pure cassis liqueur. Elaborate oak, in the form of buttered toast, is perfectly in balance, never overshadowing the fruit. The tannins are dry, rich and smooth, defining Napa elegance, grace and beauty. World class, dramatic and just about perfect, this gets better and better as it breathes in the glass. Drink now\u20132030.",
-      "price": 150.0,
-      "SKU": 8457191203113,
+      "name": "Pinot Noir Merry Edwards",
+      "description": "Amazingly rich, offering deep, complex layers of cherries, black raspberries, cola, anise biscotti, pomegranates, persimmons, black tea, orange zest, mushrooms, you name it, but don't forget the spices, everything from cloves and black pepper to cinnamon. Utterly delicious, with a silky, briskly clean mouthfeel. But the tannins are pronounced. They're not so strong as to lock the wine down, but do suggest time in the cellar. Give it four years, and it could be wonderful after 10 or more.",
+      "price": 57.0,
+      "SKU": 7875510405059,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 25,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 25,
+    "fields": {
+      "quantity": 70,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -129,12 +713,232 @@
     "model": "products.product",
     "pk": 26,
     "fields": {
-      "name": "Red Blend Colgin",
-      "description": "This is an absolutely beautiful wine to drink now, but the richness comes at the price of considerable alcohol. The color is dark and impenetrable, the aromas huge in Cabernet-inspired blackberries and black currants, with a touch of something herbal and also a stony minerality. There's also a fascinating peatiness, like an Islay Scotch. It really opens up in the glass, becoming ever more complex. It's great Napa Valley Cabernet Sauvignon, but that high alcohol may limit its ageability.",
-      "price": 290.0,
-      "SKU": 8751184430132,
+      "name": "Bordeaux-style Red Blend Colgin",
+      "description": "From the winery's estate vineyard, high up on Pritchard Hill above the Silverado Trail, comes this spectacular Cab-based masterpiece. The color is purple-black, and massively saturated. Very intricate, complex, totally enjoyable, almost perfect. Like a great Pauillac, this monumental wine announces cassis, blackberry, cigar box, pencil lead, spice and cedar flavors that go on and on. Very tannic, but so beautiful, and amazingly rich. Decant if you're drinking now, or open anytime through 2020.",
+      "price": 175.0,
+      "SKU": 8716138576499,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 26,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 26,
+    "fields": {
+      "quantity": 66,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
+      "price": 120.0,
+      "SKU": 7650169221321,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 27,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 27,
+    "fields": {
+      "quantity": 65,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "name": "Bordeaux-style Red Blend Colgin",
+      "description": "From the winery's estate vineyard, high up on Pritchard Hill above the Silverado Trail, comes this spectacular Cab-based masterpiece. The color is purple-black, and massively saturated. Very intricate, complex, totally enjoyable, almost perfect. Like a great Pauillac, this monumental wine announces cassis, blackberry, cigar box, pencil lead, spice and cedar flavors that go on and on. Very tannic, but so beautiful, and amazingly rich. Decant if you're drinking now, or open anytime through 2020.",
+      "price": 175.0,
+      "SKU": 9622169313151,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 28,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 28,
+    "fields": {
+      "quantity": 21,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "name": "Pinot Noir Goldeneye",
+      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
+      "price": 100.0,
+      "SKU": 4438757340449,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 29,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 29,
+    "fields": {
+      "quantity": 78,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "In recent years, Precious Mountain Vineyard has provided Bob Cabral with some of his most glorious fruit. Tremendous in flash and depth, it offers compelling flavors of raspberry and cherry, accented by sweet, smoky oak. There's such complexity in the acid and tannin structure, and in the earthy, stony, spicy nuances, that you find something new to love with every sip. This masterpiece is fabulous now, and will develop bottle complexity over the next 15 years, at least.",
+      "price": 94.0,
+      "SKU": 9460588610900,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 30,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 30,
+    "fields": {
+      "quantity": 42,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
+      "price": 65.0,
+      "SKU": 3194613160613,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 31,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 31,
+    "fields": {
+      "quantity": 12,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
+      "price": 100.0,
+      "SKU": 9665088685019,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 32,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 32,
+    "fields": {
+      "quantity": 16,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "name": "Bordeaux-style Red Blend Pirouette",
+      "description": "A stunning Pirouette\u201463% Cabernet Sauvignon, 22% Merlot, 9% Cab Franc and 6% Petit Verdot. Full and magnificently rich, it is loaded with dense and thrilling fruit flavors of black cherry and cassis. A streak of iron and a hint of citrus keep the wine evolving through a long, beautifully balanced finish. Retasted after being open for 24 hours, the wine was as fresh and thrilling as on the first day.",
+      "price": 50.0,
+      "SKU": 3595927131313,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 33,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 33,
+    "fields": {
+      "quantity": 76,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Seductively smooth and intriguingly aromatic, this blend of several knock-out vineyards along Westside Road\u2014Allen, Bacigalupi, Bucher, Rochioli Riverblock and Williams Selyem Estate\u2014is instantly delicious, sharing a concentration of cherry, strawberry and citrus that perfectly captures the essence of the fruit, accented by a tease of black tea. An earthy minerality wraps around dry, polished tannins, with a streak of just-right acidity, giving it a realm of juiciness and flavorful sophistication. Enjoy through 2023.",
+      "price": 69.0,
+      "SKU": 3849370376084,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 34,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 34,
+    "fields": {
+      "quantity": 93,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -144,11 +948,153 @@
     "pk": 35,
     "fields": {
       "name": "Pinot Noir Williams Selyem",
-      "description": "A stupendous Pinot Noir, showing how beautifully this vineyard performs in the remote Sonoma Coast above Fort Ross. Williams Selyem's last few vintages of Precious Mountain have been extraordinary, but this 2009 tops them all. The wine is as light as a feather in the mouth, modest in alcohol and delicately feminine, like pure satin. However, few Pinot Noirs in the world achieve this level of concentration. Wild raspberries and cherries, cola, sleek minerals, dusty baking spices and smoky oak combine for flavors that are utterly delicious. After all that, it possesses an indefinable attribute of fascination. Will age well for a long time, if you can keep your hands off it. Now\u20132021.",
-      "price": 94.0,
-      "SKU": 2097903225692,
+      "description": "Ripe and delicious right out of the bottle, although it will age well. Made from a vineyard on the true Sonoma Coast, in the remote Fort Ross area, it's fabulously rich in cherry, framboise and red currant flavors, with intriguing waves of anise, bacon and sweet, vanilla-scented smoky sandalwood. There's a foresty taste, too, suggesting dried pine needles. The tannins and acids are near perfect. Stunning now, and should hold for at least six years.",
+      "price": 90.0,
+      "SKU": 8194608397802,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 35,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 35,
+    "fields": {
+      "quantity": 69,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+      "name": "Cabernet Sauvignon Cayuse",
+      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
+      "price": 70.0,
+      "SKU": 7287898524618,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 36,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 36,
+    "fields": {
+      "quantity": 27,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
+      "price": 75.0,
+      "SKU": 7588340271198,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 37,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 37,
+    "fields": {
+      "quantity": 34,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+      "name": "Sparkling Blend Schramsberg",
+      "description": "The opulence of this sparkling wine has to be tasted to be believed. It's far softer and silkier than the winery's companion new release, the 2005 J. Schram, but then the blend is the complete opposite. This one's mainly Pinot Noir, with the balance from Chardonnay. The Pinot Noir brings a warm, raspberry- and cherry-sauce richness to Chardonnay's limes and pears, while an extraordinarily delicious toastiness pervades the whole, as if it had been gently smoked. So enticing now, it's hard to keep from drinking the whole bottle, and you certainly can, but this is a wine that will age for 10\u201315 years.",
+      "price": 110.0,
+      "SKU": 9110384458559,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 38,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 38,
+    "fields": {
+      "quantity": 96,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "This beautifully reflects the vintage as well as the place. There is astonishing density, length and detail\u2014as much as any Syrah in the country. The deep, compact and impossibly complex flavors mix notes of black fruit, cassis, licorice, coffee, baking spice, smoke and Bourbon barrel.",
+      "price": 140.0,
+      "SKU": 3667531268501,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 39,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 39,
+    "fields": {
+      "quantity": 53,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
+      "price": 75.0,
+      "SKU": 8835804081840,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 40,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 40,
+    "fields": {
+      "quantity": 10,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -157,12 +1103,24 @@
     "model": "products.product",
     "pk": 41,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
-      "price": 65.0,
-      "SKU": 7452484453394,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
+      "price": 100.0,
+      "SKU": 2030580966759,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 41,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 41,
+    "fields": {
+      "quantity": 62,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -171,12 +1129,24 @@
     "model": "products.product",
     "pk": 42,
     "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
-      "price": 140.0,
-      "SKU": 6257334244337,
+      "name": "Bordeaux-style Red Blend Verit\u00e9",
+      "description": "Massive essence of Cabernet Sauvignon, a triumph. Shows huge waves of blackberries, black currants and cassis, dark chocolate, earthy minerals and considerable oak, which is tasteful and unobtrusive, With its dryness and perfect balance, it will easily negotiate the years. Should be fine well past the year 2020.",
+      "price": 300.0,
+      "SKU": 5308593816213,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 42,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 42,
+    "fields": {
+      "quantity": 9,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -185,12 +1155,24 @@
     "model": "products.product",
     "pk": 43,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
-      "price": 65.0,
-      "SKU": 6037859844953,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Ripe and delicious right out of the bottle, although it will age well. Made from a vineyard on the true Sonoma Coast, in the remote Fort Ross area, it's fabulously rich in cherry, framboise and red currant flavors, with intriguing waves of anise, bacon and sweet, vanilla-scented smoky sandalwood. There's a foresty taste, too, suggesting dried pine needles. The tannins and acids are near perfect. Stunning now, and should hold for at least six years.",
+      "price": 90.0,
+      "SKU": 4750433669799,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 43,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 43,
+    "fields": {
+      "quantity": 87,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -200,11 +1182,23 @@
     "pk": 44,
     "fields": {
       "name": "Syrah Charles Smith",
-      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
-      "price": 140.0,
-      "SKU": 9230604538439,
+      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
+      "price": 120.0,
+      "SKU": 2023644298592,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 44,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 44,
+    "fields": {
+      "quantity": 76,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -213,12 +1207,102 @@
     "model": "products.product",
     "pk": 45,
     "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This expresses the greatness of its vintage and vineyard, offering wave after wave of raspberry and cherry pie flavors, plus notes of red currant, sweet licorice, spicy Dr. Pepper and smoky sandalwood. There's also something exotically briary and wild that intrigues. Even more remarkable is the texture, an amalgam of acids and tannins that rivals any Pinot Noir ever produced in California. It should age for up to 20 years.",
-      "price": 75.0,
-      "SKU": 9947722538553,
+      "name": "Pinot Noir Evening Land",
+      "description": "A terrific Pinot, and one of the few that absolutely demands cellaring. The tannic structure is enormous, providing a sandpapery dryness to the palate. Yet the flavor explosion is so powerful, you can enjoy it now with utter satisfaction. Erupts in grilled blackberry and cherry, Dr. Pepper cola, bacon, anise, saut\u00e9ed wild mushroom and smoky sandalwood flavors, leading to a spicy finish that continues for a full minute. Glorious and decadent. The winemaker was Sashi Moorman, from Stolpman, and the vineyard was planted in 1994 to the Calera clone. Only 115 cases were produced. Drink now\u20132017.",
+      "price": 150.0,
+      "SKU": 8650722457187,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 45,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 45,
+    "fields": {
+      "quantity": 70,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+      "name": "Pinot Noir W.H. Smith",
+      "description": "The first thoughts on this wine are how young it is, and how much potential it shows. The immaturity lies in the primary fruit, acidic character, like a big gulp of fruity cola. But the wine's awesome future is in its vast complexity and balance, and the way it dominates the palate and lasts and lasts. A blend of several vineyards, it's high in acidity, with massive cherry, pomegranate, rhubarb preserve, licorice, earthy mushroom and cedar flavors. So balanced and dry, so elegant and powerful, so silky and complex, it is quite simply a very great Pinot Noir, and an early indication that the vintage on the far Sonoma Coast may be the greatest ever. Tasted twice.",
+      "price": 52.0,
+      "SKU": 4038999787384,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 46,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 46,
+    "fields": {
+      "quantity": 46,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+      "name": "Cabernet Sauvignon Von Strasser",
+      "description": "So enormously delicious, it will be hard to keep from drinking this gorgeous Cabernet right away, and that's just fine. It's composed of the most intensly concentrated flavors of blueberries and blackberries\u2014dense, pure and slightly heady with a liqueur-like alcohol. The tannins are classic Diamond Mountain, firm and minerally, while oak plays the perfect role of the buttered toast and sweetly charred supporting character. Despite its immediate attraction, it's best cellared for 6\u20138 years, at the very least. Fans of old Cabernets will still be loving it in 2029.",
+      "price": 70.0,
+      "SKU": 4514381782014,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 47,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 47,
+    "fields": {
+      "quantity": 32,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+      "name": "Pinot Noir Evening Land",
+      "description": "A terrific Pinot, and one of the few that absolutely demands cellaring. The tannic structure is enormous, providing a sandpapery dryness to the palate. Yet the flavor explosion is so powerful, you can enjoy it now with utter satisfaction. Erupts in grilled blackberry and cherry, Dr. Pepper cola, bacon, anise, saut\u00e9ed wild mushroom and smoky sandalwood flavors, leading to a spicy finish that continues for a full minute. Glorious and decadent. The winemaker was Sashi Moorman, from Stolpman, and the vineyard was planted in 1994 to the Calera clone. Only 115 cases were produced. Drink now\u20132017.",
+      "price": 150.0,
+      "SKU": 8413351373225,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 48,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 48,
+    "fields": {
+      "quantity": 53,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -227,12 +1311,206 @@
     "model": "products.product",
     "pk": 49,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "In a vintage that produced the finest overall lineup of Cayuse wines to date, it may seem a little nit-picky to score some higher and some lower. But the En Chamberlin deserves first place again. Brilliant aromatics of smoked meat, bacon fat and otherworldly roasted accents seduce instantly. Once on the palate, the silky, balanced, near-perfect mix of umami and fruit, plus licorice, cassis, coffee liqueur and black tea notes suggest it's as decadent as it is delicious.",
-      "price": 75.0,
-      "SKU": 4326746088111,
+      "name": "Sparkling Blend Iron Horse",
+      "description": "Aged on the lees for 13 years, this wine has developed stunning creaminess and complexity. Made from 60% Pinot Noir and 40% Chardonnay, it shows a hazelnut smokiness, with fantastically rich, subtle layers of limes, apples, tangerine zest, minerals and yeast. There's a honeyed richness to the finish, which balances high acidity, making it feel dry. A tremendous brut that should develop for years to come. Now\u20132020, in a cool cellar. Production was 50 cases.",
+      "price": 147.0,
+      "SKU": 8593025317775,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 49,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 49,
+    "fields": {
+      "quantity": 53,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 50,
+    "fields": {
+      "name": "Bordeaux-style Red Blend BOND",
+      "description": "This year's Matriarch is very similar to Harlan Estate in structure, and in some ways, a superior wine, or at least more delicious now. Shows the most beautiful black currant, cedar, blueberry pie and Asian spice flavors. What makes the structure so gorgeous are the firm tannins. Ultimately, it's a refined, exquisite red wine. Hard to imagine a better one for drinking over the next decade, and just shows that price sometimes has no relationship to quality.",
+      "price": 90.0,
+      "SKU": 8479532956003,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 50,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 50,
+    "fields": {
+      "quantity": 86,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 51,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
+      "price": 75.0,
+      "SKU": 2168427530956,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 51,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 51,
+    "fields": {
+      "quantity": 36,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 52,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
+      "price": 100.0,
+      "SKU": 9503080315950,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 52,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 52,
+    "fields": {
+      "quantity": 41,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 53,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
+      "price": 120.0,
+      "SKU": 4333450790958,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 53,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 53,
+    "fields": {
+      "quantity": 16,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 54,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
+      "price": 65.0,
+      "SKU": 1073991661812,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 54,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 54,
+    "fields": {
+      "quantity": 72,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 55,
+    "fields": {
+      "name": "Cabernet Sauvignon Cayuse",
+      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
+      "price": 70.0,
+      "SKU": 7334370893403,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 55,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 55,
+    "fields": {
+      "quantity": 15,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 56,
+    "fields": {
+      "name": "Pinot Noir Goldeneye",
+      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
+      "price": 100.0,
+      "SKU": 6853951183502,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 56,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 56,
+    "fields": {
+      "quantity": 49,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -241,12 +1519,128 @@
     "model": "products.product",
     "pk": 57,
     "fields": {
-      "name": "Cabernet Sauvignon Stonestreet",
-      "description": "This is Cabernet Sauvignon lifted to greatness, an impeccable statement concerning this region of the high Mayacamas Mountains on the Sonoma side that, by law, is forced to bear a \u201cvalley\u201d appellation. The wine is awesome, vast and complex, fascinating in every aspect, yet locked down in tough tannins that exaggerate the acidity, making the wine functionally undrinkable. It is a beautiful, classic Cabernet, very near perfect, and certainly one of the successes of the vintage. Don't even think of drinking it before 2014, and it should evolve in the bottle for a good 10 years after that.",
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Pretty as all get-out, this wine is a floral masterpiece\u2014a study in coastal rose and forest scents with a counterpunch of white pepper that leaves one wanting more. Juicy raspberry, strawberry and tangerine flavors are seasoned in allspice and tobacco, the palate so beautifully delicate yet fully realized in savory complexity and length.",
       "price": 75.0,
-      "SKU": 8719863631069,
+      "SKU": 3422235038336,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 57,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 57,
+    "fields": {
+      "quantity": 74,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 58,
+    "fields": {
+      "name": "Pinot Noir Goldeneye",
+      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
+      "price": 100.0,
+      "SKU": 6400068784943,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 58,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 58,
+    "fields": {
+      "quantity": 45,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 59,
+    "fields": {
+      "name": "Bordeaux-style Red Blend Figgins",
+      "description": "The second release of Figgins\u2014a single wine produced by Leonetti's Chris Figgins\u2014is astonishing. Tasted in a lineup of exceptional Walla Walla reds, it outshined them all. It's a sophisticated blend of Cabernet Sauvignon, Petit Verdot and Merlot, from the Figgins Vineyard, with gorgeous aromas of flowers, spices and black fruits. Seamless and long, complex and forceful without being overpowering, it can stand alongside top tier Bordeaux costing four or five times as much.",
+      "price": 85.0,
+      "SKU": 6580256221186,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 59,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 59,
+    "fields": {
+      "quantity": 94,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 60,
+    "fields": {
+      "name": "Chardonnay Flowers",
+      "description": "Let the conversations about minerality begin. Whatever it is, or wherever it comes from, it's here big time, adding a lick of steel and a metallic mouthfeel to the underlying fruit. And what powerful fruit it is, ranging from orange and guava to honeydew and citron. This bone dry, crisp Chardonnay is a game changer that will make you look at California Chardonnay differently.",
+      "price": 70.0,
+      "SKU": 3163572104944,
+      "is_available": true,
+      "image": "products/white_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 60,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 60,
+    "fields": {
+      "quantity": 46,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 61,
+    "fields": {
+      "name": "Syrah Cayuse",
+      "description": "The wine begins to change immediately; as soon as the cork is pulled the bouquet emerges and begins to evolve. Thin layers of scent and flavor are stacked, with rose petals on top, then supremely dense with darker layers of smoke, graphite, ash, mushroom, black fruits. The tannins never stick out and the flavors just keep on going, bringing in cured meats, mocha, and on and on.",
+      "price": 70.0,
+      "SKU": 9224808908080,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 61,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 61,
+    "fields": {
+      "quantity": 77,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -255,12 +1649,24 @@
     "model": "products.product",
     "pk": 62,
     "fields": {
-      "name": "Cabernet Sauvignon Trefethen",
-      "description": "This is nearly perfect, a massive, monumental wine whose sheer power is matched only by its grace and refinement. The flavors of blackberries, cassis, dark chocolate, buttered toast and cedar flood the mouth, tightly controlled by firm tannins and good acidity. Decant for several hours if you open it now, but better to give it 6\u201310 years in the bottle.",
-      "price": 100.0,
-      "SKU": 2569600625943,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Dazzles with richness, offering waves of candied, tart raspberry and cherry fruit, Dr. Pepper, exotic Indian spice, rose petal and sandalwood flavors, as well as undefinable feral things. Absolutely dry and high in acidity, with overwhelming complexity, it's a milestone. Drink now through 2014; could go way beyond.",
+      "price": 72.0,
+      "SKU": 2414955057309,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 62,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 62,
+    "fields": {
+      "quantity": 22,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -269,12 +1675,24 @@
     "model": "products.product",
     "pk": 63,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "The only one of the Cayuse Syrahs that is co-fermented with Viognier, this opens with a stunning, floral bouquet, showing extraordinary depth and texture. The wine has a floral top, a thickly fruity middle and a base with smoke, rock and meat. Still very young, it is already a complete, fully-realized, near-perfect wine with a finish that extends for many minutes. This should age for 25 \u201330 years. Right now, it's almost frozen in place; still a bit tannic, but with superb aging potential.",
-      "price": 65.0,
-      "SKU": 7425497786393,
+      "name": "Chardonnay Dutton-Goldfield",
+      "description": "The cold and fog actually helped this Chardonnay, which achieves a remarkable delicacy and tartness despite the power of its fruit. Really remarkable for the flood of golden mango, Asian pear and Key lime pie richness, which is grounded by a firm minerality. Oak influence and aging on the lees lend the perfect touches of smoky, buttered toast and zesty creaminess to this dry, polished wine. A mere 587 cases were produced.",
+      "price": 50.0,
+      "SKU": 6478266751315,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/white_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 63,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 63,
+    "fields": {
+      "quantity": 93,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -283,12 +1701,388 @@
     "model": "products.product",
     "pk": 64,
     "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "Depth and texture dominate; it's all whole-cluster fruit, aged in new barriques. This fine follow-up to the 2006 features a little more delicacy, with a lovely floral component and some earth. The depth is astonishing in the weight and texture and the way the wine plays out across the palate. The finish never ends: a glorious mix of black cherry, earth, herb, spice, and rock.",
-      "price": 140.0,
-      "SKU": 4975436680540,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Williams Selyem expresses the intricacies of this vineyard with more consistency than any other winery. This remarkably intellectual, ageworthy wine is bone dry, with marked acidity and complexity. The flavors range from wild cherries, cola and balsam to raspberry tart and buttered cinnamon toast. Its complexity is like a mandala, increasing in beauty the longer one examines it. A softly tannic bitterness lingers on the finish; drink 2019\u20132030.",
+      "price": 95.0,
+      "SKU": 9626503611403,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 64,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 64,
+    "fields": {
+      "quantity": 27,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 65,
+    "fields": {
+      "name": "Cabernet Sauvignon Joseph Phelps",
+      "description": "Price be damned, this is an authentically gorgeous, important Cabernet Sauvignon. It calls to mind the amazing 2001, with its huge, perfect tannins and acids and artistic appliqu\u00e9 of new oak. But the star of the show surely is the fruit. Mounds of ripe blackberries and cherries pile up, veering into currants and cassis and something wild and decadently animal, like charred meat. Fabulous now despite the firm tannins, and should evolve for many years.",
+      "price": 225.0,
+      "SKU": 6837390499189,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 65,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 65,
+    "fields": {
+      "quantity": 37,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 66,
+    "fields": {
+      "name": "Pinot Noir Failla",
+      "description": "This is an astonishingly good Pinot Noir that immediately shows the Sonoma Coast virtues of dryness, acidity, firm minerality, complexity and age worthiness. Flavors abound, with dominating notes of sour cherry, persimmon, cinnamon spice and sweet oak. It's rich and refined, pure, and a great expression of the cool 2010 vintage. Drink now\u20132020.",
+      "price": 60.0,
+      "SKU": 6384086094359,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 66,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 66,
+    "fields": {
+      "quantity": 49,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 67,
+    "fields": {
+      "name": "Cabernet Sauvignon Janzen",
+      "description": "This wine will divide aficionados. Some will find it too soft and fruity. Others will marvel at its sheer deliciousness. It's fantastically rich, a wine of deliriously decadent flavors, ranging from blackberry jam and cr\u00e8me de cassis to mocha, blueberry extract and buttered cinnamon toast. Yes, it's soft, but it's the softness of fine velvet. After all that richness, the finish is amazingly dry. Drink over the next few years to enjoy its youthful beauty.",
+      "price": 135.0,
+      "SKU": 9931808143504,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 67,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 67,
+    "fields": {
+      "quantity": 82,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 68,
+    "fields": {
+      "name": "Bordeaux-style Red Blend BOND",
+      "description": "Very refined, with lovely perfume. Heady, showing currants, cassis, cedar, chocolate-covered cherries and sweet herbs. Decadent, classy, elegant, with a great tannin structure. Just oozes class.",
+      "price": 275.0,
+      "SKU": 8755192587436,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 68,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 68,
+    "fields": {
+      "quantity": 27,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 69,
+    "fields": {
+      "name": "Syrah K Vintners",
+      "description": "From Northridge Vineyard grapes, this mix of four clones spent more than two years in barrel. Tremendous depth and complexity are apparent on the nose, and there is no let-down on the palate. It's a seriously powerful wine, with muscle and magic. It opens generously into beautifully integrated layers of ripe fruit, confection, candied rind, cacao and a finishing touch of minerality.",
+      "price": 70.0,
+      "SKU": 6561755582358,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 69,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 69,
+    "fields": {
+      "quantity": 41,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 70,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This is a Pinot Noir of considerable force. Your first impression is of irrepressible power, with masses of fruit punching through an overlay of tannin and oak. Then the flavors fantail out, suggesting cherries, cola, currants and spices that are rich and complex through the long finish. For all its richness, the wine retains an agreeable delicacy of texture. Comprised of lots selected by winemaker Bob Cabral for this anniversary bottling, it's right up there with Williams Selyem's best 2010 Pinots, and just as ageable. Drink now\u20132022. The wine is only available as part of a two-pack from the winery for $250; the other bottle is the 2010 Morning Dew Ranch Pinot Noir, from Anderson Valley.",
+      "price": 125.0,
+      "SKU": 9409682088490,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 70,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 70,
+    "fields": {
+      "quantity": 22,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 71,
+    "fields": {
+      "name": "Cabernet Sauvignon Alpha Omega",
+      "description": "Awesome Cabernet from this esteemed vineyard in Oakville. Defines the modern Napa style in the perfectly ripe black currant and blackberry fruit, and the ultra-refined tannins. Hard to exaggerate the depth and length, the sheer opulence of this 100% Cab. It was aged in 80% new French oak, which adds even richer notes of wood smoke and sweet vanilla. Should evolve slowly through 2020, but only 75 cases were produced.",
+      "price": 130.0,
+      "SKU": 1003544722904,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 71,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 71,
+    "fields": {
+      "quantity": 58,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 72,
+    "fields": {
+      "name": "Cabernet Sauvignon Betz Family",
+      "description": "This P\u00e8re de Famille is 85% Cabernet Sauvignon, with the rest split between Merlot and Petit Verdot. Sweet, pure fruit\u2014black currants and black cherry and blackberry\u2014is packed tight, concentrated and polished, but needing hours to breathe open. Dense, dusty, complex, complicated, this wine is sophisticated beyond description.",
+      "price": 60.0,
+      "SKU": 1594144462389,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 72,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 72,
+    "fields": {
+      "quantity": 37,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 73,
+    "fields": {
+      "name": "Pinot Noir Goldeneye",
+      "description": "A spectacular Pinot, continuing a string of great vintages from this little vineyard. The year 2007 gave California supernaturally rich but balanced Pinot Noirs, and this is one of them. It's sensational, offering broad, exotic fruit flavors, pinpointed with exotic spices, and exquisitely highlighted with French oak. Truly fine, this small-production wine should age over the next 6\u20138 years.",
+      "price": 75.0,
+      "SKU": 9299411932474,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 73,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 73,
+    "fields": {
+      "quantity": 24,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 74,
+    "fields": {
+      "name": "Chardonnay Ramey",
+      "description": "This wine is deliciously elegant yet decadently rich in all the right ways, from a prime, longtime vineyard source planted to vines over 40 years old. Honeyed apple comes to the fore amid lush, formidable layers of complexity and high-minded pursuit, never getting bogged down, the minerality perfectly pitched and the oak fully integrated.",
+      "price": 65.0,
+      "SKU": 9178493114611,
+      "is_available": true,
+      "image": "products/white_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 74,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 74,
+    "fields": {
+      "quantity": 5,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 75,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "This is beautifully lilting in preciously defined aromas of rose petal and wild strawberry. From there, it's all subtlety and ethereal elegance. The wine is restrained, nurtured in a basket of nutmeg and graham cracker, as well as freshly packed mushroomy earth. This wine is a stunner right out of the glass, but is sure to continue its fine course through 2022\u20132025.",
+      "price": 59.0,
+      "SKU": 8954666857633,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 75,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 75,
+    "fields": {
+      "quantity": 52,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 76,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "A brilliant wine. Racy in acidity, silky in texture, yet powerful, it exudes the essence of Pinot Noir's greatness. Shows great fruity ripeness in the cherry, Dr. Pepper cola, licorice and bacon flavors, and also a wild, forest quality of grilled mushrooms, thyme and fennel. Absolutely dry, with a firm spine of tannins, the structure is near perfect. A divine expression of Hirsch, and a good candidate for six years in the cellar.",
+      "price": 72.0,
+      "SKU": 1931541267457,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 76,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 76,
+    "fields": {
+      "quantity": 33,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 77,
+    "fields": {
+      "name": "Bordeaux-style Red Blend Blackbird Vineyards",
+      "description": "A spectacular wine that gets better and better with every sip. It's dramatic from the get-go, with rich, fine tannins framing extraordinarily good flavors of blackberries, black currants, anise, dark chocolate and cedar. Superb structure, great length and finish, with perfect acidity. A joy to drink. Now\u20132016.",
+      "price": 90.0,
+      "SKU": 7847696507104,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 77,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 77,
+    "fields": {
+      "quantity": 68,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 78,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Not showing well now due to the tannins. It's dry and tough, with a resistance to the richness. Yet the core of flavor is enormous. Shows concentrated, flashy flavors of cherry marmalade, raspberry, orange blossom, cola, licorice, rose tea and spices that go on and on and continue to develop in the glass. The texture is pure silk and satin. Needs 4\u20136 years to develop, and could go beyond that.",
+      "price": 78.0,
+      "SKU": 5034716746842,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 78,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 78,
+    "fields": {
+      "quantity": 27,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -297,12 +2091,258 @@
     "model": "products.product",
     "pk": 79,
     "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
-      "price": 65.0,
-      "SKU": 1043182304535,
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Always one of Williams Selyem's top Pinot Noirs, the 2007 is a spectacular wine. The vines are the closest to the river in the famed Rochioli vineyard, and the resulting wine always has an elegant structure and fruity accessibility that make it drinkable at a younger age. Showing rich flavors of cherries, red currants, cola, bacon, anise, Asian spices and smoky oak, it will develop beautifully over the next decade.",
+      "price": 75.0,
+      "SKU": 3039747422314,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 79,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 79,
+    "fields": {
+      "quantity": 81,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 80,
+    "fields": {
+      "name": "Pinot Noir Sea Smoke",
+      "description": "This very dense, tannic Pinot Noir represents a triumph for both the winery, the vintage and the region it represents. A multi-clone blend (hence the name) with high, cool-climate acidity and aged in 100% new oak, it's still young, fresh and tight. The astringency throws a cloak over the raspberries, cherries, rosehip tea and Indian spice flavors, which reveal themselves only reluctantly. But they're there, in an imposing texture of velvet and silk. This enormous wine demands time. The window seems to be 2012\u20132015.",
+      "price": 80.0,
+      "SKU": 5289217257374,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 80,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 80,
+    "fields": {
+      "quantity": 97,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 81,
+    "fields": {
+      "name": "Syrah Charles Smith",
+      "description": "Killer juice. It has it all\u2014focus, depth, detail and power. Spice and herb, punch and power, wrapped into a wine with bright, tight berry fruit and layer upon layer of earth, rock and herb. It surpasses the ability of language to describe it. But it needs time\u2014a lot of time.",
+      "price": 120.0,
+      "SKU": 8780578707001,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 81,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 81,
+    "fields": {
+      "quantity": 43,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 82,
+    "fields": {
+      "name": "Bordeaux-style Red Blend Harlan Estate",
+      "description": "Massive, decadent. Opens with extraordinary aromas of cedar, black currants, cherries, chocolate, sage, pepper and anise, with hints of roasted game. Feels very round, smooth but powerful. Almost sweet in red and black currants and chocolate. So refined, absolutely delicious. Beautiful, lush, complex, soft. Should age.",
+      "price": 150.0,
+      "SKU": 2714260877927,
+      "is_available": true,
+      "image": null,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 82,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 82,
+    "fields": {
+      "quantity": 47,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 83,
+    "fields": {
+      "name": "Cabernet Sauvignon Krutz",
+      "description": "This is really a spectacular wine. It's hard to say why it's so superior to Krutz's 2005 bottling, but it's richer and more elegant in every respect. Combines immense power with great finesse. The refined essence of blackberries, black currants and spices thrills the palate, accented with the most beautiful coating of smoky oak. A great achievement that should develop in the bottle through 2018.",
+      "price": 70.0,
+      "SKU": 6262893752086,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 83,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 83,
+    "fields": {
+      "quantity": 32,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 84,
+    "fields": {
+      "name": "Pinot Noir Williams Selyem",
+      "description": "Not showing well now due to the tannins. It's dry and tough, with a resistance to the richness. Yet the core of flavor is enormous. Shows concentrated, flashy flavors of cherry marmalade, raspberry, orange blossom, cola, licorice, rose tea and spices that go on and on and continue to develop in the glass. The texture is pure silk and satin. Needs 4\u20136 years to develop, and could go beyond that.",
+      "price": 78.0,
+      "SKU": 8127913112689,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 84,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 84,
+    "fields": {
+      "quantity": 7,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 85,
+    "fields": {
+      "name": "Cabernet Sauvignon Napa Angel",
+      "description": "From Chilean winemaker, Aurelio Montes, this 100% Cabernet shows massively concentrated flavors of ripe blackberries and cassis, with richer notes of dark chocolate, anise, spices and smoky cedar. What an amazing tannin structure, intricate, fine and complex. A wine to drink now for sheer opulence or to age for at least a dozen years.",
+      "price": 90.0,
+      "SKU": 9190535283712,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 85,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 85,
+    "fields": {
+      "quantity": 99,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 86,
+    "fields": {
+      "name": "Syrah Qup\u00e9",
+      "description": "Fantastic, fabulous, a stupendously good Syrah that shows off Bien Nacido at its most perfect. Totally dry, with sturdy but ultra-refined tannins, it displays massive waves of blackberries, black currants, blueberries, smoked meat, violets, sandalwood and black pepper. Just beginning to find its groove, it should develop for many years.",
+      "price": 95.0,
+      "SKU": 7154819330249,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 86,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 86,
+    "fields": {
+      "quantity": 6,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 87,
+    "fields": {
+      "name": "Pinot Noir Lynmar",
+      "description": "This important Pinot Noir is expensive, but it is absolutely worth a search. It's not a single-vineyard wine, but a blend of various blocks from the cooler southern part of the valley. Oak, to the tune of 70% new, is very strong in char and vanilla, but way stronger is the fruit itself, which is exemplary and stunning. Raspberries, cherries and strawberries just begin to describe it, with all sorts of spice and earth complexities. Stuns with purity, complexity and sheer delicious power. Great now, and will easily develop over the next 6\u20138 years.",
+      "price": 100.0,
+      "SKU": 5071384598075,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 87,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 87,
+    "fields": {
+      "quantity": 55,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 88,
+    "fields": {
+      "name": "Pinot Noir Melville",
+      "description": "Combines a delicate, floral lightness with a potent intricacy to produce a wine of vast intellectual interest. Dry and somewhat tannic, and crisp in tangy acidity, this small-production Pinot features tiers of tart red cherries, rosehip tea, cola, mint, lavender, anise and pepper, edged with the honeyed sweetness of smoky, glazed oak. A tremendous achievement, and the wine of the vintage.",
+      "price": 52.0,
+      "SKU": 4193901109633,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 88,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 88,
+    "fields": {
+      "quantity": 35,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -311,12 +2351,154 @@
     "model": "products.product",
     "pk": 89,
     "fields": {
-      "name": "Cabernet Sauvignon Cayuse",
-      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
+      "name": "Cabernet Sauvignon Krutz",
+      "description": "This is really a spectacular wine. It's hard to say why it's so superior to Krutz's 2005 bottling, but it's richer and more elegant in every respect. Combines immense power with great finesse. The refined essence of blackberries, black currants and spices thrills the palate, accented with the most beautiful coating of smoky oak. A great achievement that should develop in the bottle through 2018.",
       "price": 70.0,
-      "SKU": 4092774787926,
+      "SKU": 9895578959247,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 89,
+      "discount": null,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 89,
+    "fields": {
+      "quantity": 59,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 90,
+    "fields": {
+      "name": "Cabernet Sauvignon Yao Ming",
+      "description": "The former basketball star's initial release immediately establishes itself among the elite Cabernets of Napa Valley. Made from mountain vineyards on Atlas Peak and benches in the Rutherford appellation, it combines intensity with elegance. Bursts with upfront, delicious blackberry, cr\u00e8me de cassis and dark chocolate flavors that are wildly sweet on the midpalate, but then finish thoroughly dry. Structure comes by way of a tangy minerality and finely laced tannins. This is one of those wines that is softly decadent from start to finish, although it's probably not one to hold much beyond six years.",
+      "price": 625.0,
+      "SKU": 7096279146554,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 90,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 90,
+    "fields": {
+      "quantity": 37,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 91,
+    "fields": {
+      "name": "Cabernet Sauvignon Napa Angel",
+      "description": "From Chilean winemaker, Aurelio Montes, this 100% Cabernet shows massively concentrated flavors of ripe blackberries and cassis, with richer notes of dark chocolate, anise, spices and smoky cedar. What an amazing tannin structure, intricate, fine and complex. A wine to drink now for sheer opulence or to age for at least a dozen years.",
+      "price": 90.0,
+      "SKU": 2397508155771,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 91,
+      "discount": 4,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 91,
+    "fields": {
+      "quantity": 30,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 92,
+    "fields": {
+      "name": "Chardonnay Rochioli",
+      "description": "A spectacular Chardonnay\u2014this is dazzingly beautiful and mesmerizing in its appeal. The complexity of flavor stuns, offering tiers of pineapples, oranges, green apples and golden mangoes. Then the oaky influences appear in the form of buttered toast and caramel, with a suggestion of honey. The finish is dry and crisp in acidity.",
+      "price": 60.0,
+      "SKU": 8475702615029,
+      "is_available": true,
+      "image": "products/white_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 92,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 92,
+    "fields": {
+      "quantity": 82,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 93,
+    "fields": {
+      "name": "Red Blend Ridge",
+      "description": "Without doubt this is a wine to cellar. It's massive in flavor, with the purist blackcurrant and cassis fruit you can imagine, and the huge plaster of sweet oak is perfectly balanced. Then there are the tannins. They're fine and complex, but gritty. There's an astringency throughout that a great steak will cut through, but it would be infanticide to open this before, say, 2010. Should improve through 2020 and beyond.",
+      "price": 120.0,
+      "SKU": 7937056937003,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 93,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 93,
+    "fields": {
+      "quantity": 70,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 94,
+    "fields": {
+      "name": "Cabernet Sauvignon Diamond Creek",
+      "description": "The most complete and compelling of Diamond Creek's trio of '02s, combining the opulent accessibility of Gravelly Meadow with the power and authority of Volcanic Hill. The aromas of cassis, red currants, cedar, tobacco and cigar box lead to massively packed Cabernet flavors wrapped in huge, dusty tannins. The wine is so balanced, so distinguished and complete. Decant now if you must drink it, but it should start to mellow by 2008, and then peak and hold through 2015 at least.",
+      "price": 175.0,
+      "SKU": 6699456447957,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 94,
+      "discount": 1,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 94,
+    "fields": {
+      "quantity": 70,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -325,12 +2507,76 @@
     "model": "products.product",
     "pk": 95,
     "fields": {
-      "name": "Pinot Noir Flowers",
-      "description": "A cool climate has given this wine bracing acidity and gentle-yet-persistent tannins. Its flavors of wild raspberries and cherries, with spice and mineral overtones, are delicious. There's a feral quality that expresses umami perfectly, suggesting butter-saut\u00e9ed, tamari-splashed mushrooms and crisped prosciutto. The oak is powerful and present in the form of toast and sweet vanilla, but perfectly balanced with the wine's volume. For all its richness, the wine finishes bone dry. Drink this impeccable Pinot Noir now through 2020.",
-      "price": 70.0,
-      "SKU": 8270701880165,
+      "name": "Cabernet Sauvignon JCB",
+      "description": "An outstanding wine, the best California Cabernet Jean-Charles Boisset has ever produced from any of his properties. It stands out in any tasting of its peers. Made from 100% Cabernet Sauvignon, and aged in 60% new oak, it shows satisfying, complex flavors of blackberries, blueberries, cassis, hazelnut-infused chocolate and spices. Hard to exaggerate its power and grace. Wonderful now and for a good six years, but it's difficult to predict its evolution beyond 2018.",
+      "price": 150.0,
+      "SKU": 1760384650869,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 95,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 95,
+    "fields": {
+      "quantity": 73,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 96,
+    "fields": {
+      "name": "Pinot Noir Sea Smoke",
+      "description": "This very dense, tannic Pinot Noir represents a triumph for both the winery, the vintage and the region it represents. A multi-clone blend (hence the name) with high, cool-climate acidity and aged in 100% new oak, it's still young, fresh and tight. The astringency throws a cloak over the raspberries, cherries, rosehip tea and Indian spice flavors, which reveal themselves only reluctantly. But they're there, in an imposing texture of velvet and silk. This enormous wine demands time. The window seems to be 2012\u20132015.",
+      "price": 80.0,
+      "SKU": 4318001584758,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 96,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 96,
+    "fields": {
+      "quantity": 38,
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 97,
+    "fields": {
+      "name": "Cabernet Sauvignon Caymus",
+      "description": "So delicious now, you can hardly keep your hands off it. Blackberry tart, ripe blueberry, cassis, milk chocolate, licorice and sweet, smoky cedar flavors flood the mouth, dramatically huge and memorable, and lasting long into the finish. The tannins are obvious, but sweetly ripe and soft. A brilliant evocation of Napa Cabernet, despite a high production level of nearly 30,000 cases, which is about the same size as a Bordeaux first growth. Shows the class and potency this bottling has exhibited for many years, and believe it or not, the price is a relative bargain these days. Drink now\u20132020.",
+      "price": 130.0,
+      "SKU": 8354592076491,
+      "is_available": true,
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 97,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 97,
+    "fields": {
+      "quantity": 71,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
@@ -339,1062 +2585,76 @@
     "model": "products.product",
     "pk": 98,
     "fields": {
-      "name": "Pinot Noir Merry Edwards",
-      "description": "Amazingly rich, offering deep, complex layers of cherries, black raspberries, cola, anise biscotti, pomegranates, persimmons, black tea, orange zest, mushrooms, you name it, but don't forget the spices, everything from cloves and black pepper to cinnamon. Utterly delicious, with a silky, briskly clean mouthfeel. But the tannins are pronounced. They're not so strong as to lock the wine down, but do suggest time in the cellar. Give it four years, and it could be wonderful after 10 or more.",
-      "price": 57.0,
-      "SKU": 2541677856047,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 104,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Colgin",
-      "description": "From the winery's estate vineyard, high up on Pritchard Hill above the Silverado Trail, comes this spectacular Cab-based masterpiece. The color is purple-black, and massively saturated. Very intricate, complex, totally enjoyable, almost perfect. Like a great Pauillac, this monumental wine announces cassis, blackberry, cigar box, pencil lead, spice and cedar flavors that go on and on. Very tannic, but so beautiful, and amazingly rich. Decant if you're drinking now, or open anytime through 2020.",
-      "price": 175.0,
-      "SKU": 2960977459509,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 107,
-    "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
-      "price": 120.0,
-      "SKU": 2357984819177,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 109,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Colgin",
-      "description": "From the winery's estate vineyard, high up on Pritchard Hill above the Silverado Trail, comes this spectacular Cab-based masterpiece. The color is purple-black, and massively saturated. Very intricate, complex, totally enjoyable, almost perfect. Like a great Pauillac, this monumental wine announces cassis, blackberry, cigar box, pencil lead, spice and cedar flavors that go on and on. Very tannic, but so beautiful, and amazingly rich. Decant if you're drinking now, or open anytime through 2020.",
-      "price": 175.0,
-      "SKU": 4910344661547,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 111,
-    "fields": {
-      "name": "Pinot Noir Goldeneye",
-      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
-      "price": 100.0,
-      "SKU": 7158705407427,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 115,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "In recent years, Precious Mountain Vineyard has provided Bob Cabral with some of his most glorious fruit. Tremendous in flash and depth, it offers compelling flavors of raspberry and cherry, accented by sweet, smoky oak. There's such complexity in the acid and tannin structure, and in the earthy, stony, spicy nuances, that you find something new to love with every sip. This masterpiece is fabulous now, and will develop bottle complexity over the next 15 years, at least.",
-      "price": 94.0,
-      "SKU": 7670703142199,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 119,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
-      "price": 65.0,
-      "SKU": 1710684848767,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 121,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
-      "price": 100.0,
-      "SKU": 5941259150592,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 128,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Pirouette",
-      "description": "A stunning Pirouette\u201463% Cabernet Sauvignon, 22% Merlot, 9% Cab Franc and 6% Petit Verdot. Full and magnificently rich, it is loaded with dense and thrilling fruit flavors of black cherry and cassis. A streak of iron and a hint of citrus keep the wine evolving through a long, beautifully balanced finish. Retasted after being open for 24 hours, the wine was as fresh and thrilling as on the first day.",
-      "price": 50.0,
-      "SKU": 7119659011747,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 130,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Seductively smooth and intriguingly aromatic, this blend of several knock-out vineyards along Westside Road\u2014Allen, Bacigalupi, Bucher, Rochioli Riverblock and Williams Selyem Estate\u2014is instantly delicious, sharing a concentration of cherry, strawberry and citrus that perfectly captures the essence of the fruit, accented by a tease of black tea. An earthy minerality wraps around dry, polished tannins, with a streak of just-right acidity, giving it a realm of juiciness and flavorful sophistication. Enjoy through 2023.",
-      "price": 69.0,
-      "SKU": 4673047997302,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 131,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Ripe and delicious right out of the bottle, although it will age well. Made from a vineyard on the true Sonoma Coast, in the remote Fort Ross area, it's fabulously rich in cherry, framboise and red currant flavors, with intriguing waves of anise, bacon and sweet, vanilla-scented smoky sandalwood. There's a foresty taste, too, suggesting dried pine needles. The tannins and acids are near perfect. Stunning now, and should hold for at least six years.",
-      "price": 90.0,
-      "SKU": 8054075284899,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 133,
-    "fields": {
-      "name": "Cabernet Sauvignon Cayuse",
-      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
-      "price": 70.0,
-      "SKU": 7696327104787,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 134,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
-      "price": 75.0,
-      "SKU": 7356175554690,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 140,
-    "fields": {
-      "name": "Sparkling Blend Schramsberg",
-      "description": "The opulence of this sparkling wine has to be tasted to be believed. It's far softer and silkier than the winery's companion new release, the 2005 J. Schram, but then the blend is the complete opposite. This one's mainly Pinot Noir, with the balance from Chardonnay. The Pinot Noir brings a warm, raspberry- and cherry-sauce richness to Chardonnay's limes and pears, while an extraordinarily delicious toastiness pervades the whole, as if it had been gently smoked. So enticing now, it's hard to keep from drinking the whole bottle, and you certainly can, but this is a wine that will age for 10\u201315 years.",
-      "price": 110.0,
-      "SKU": 3252339703638,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 141,
-    "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "This beautifully reflects the vintage as well as the place. There is astonishing density, length and detail\u2014as much as any Syrah in the country. The deep, compact and impossibly complex flavors mix notes of black fruit, cassis, licorice, coffee, baking spice, smoke and Bourbon barrel.",
-      "price": 140.0,
-      "SKU": 8959142320514,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 143,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
-      "price": 75.0,
-      "SKU": 2522217269767,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 144,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
-      "price": 100.0,
-      "SKU": 8268084780449,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 146,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Verit\u00e9",
-      "description": "Massive essence of Cabernet Sauvignon, a triumph. Shows huge waves of blackberries, black currants and cassis, dark chocolate, earthy minerals and considerable oak, which is tasteful and unobtrusive, With its dryness and perfect balance, it will easily negotiate the years. Should be fine well past the year 2020.",
-      "price": 300.0,
-      "SKU": 7605096442185,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 147,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Ripe and delicious right out of the bottle, although it will age well. Made from a vineyard on the true Sonoma Coast, in the remote Fort Ross area, it's fabulously rich in cherry, framboise and red currant flavors, with intriguing waves of anise, bacon and sweet, vanilla-scented smoky sandalwood. There's a foresty taste, too, suggesting dried pine needles. The tannins and acids are near perfect. Stunning now, and should hold for at least six years.",
-      "price": 90.0,
-      "SKU": 5690363518735,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 151,
-    "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
-      "price": 120.0,
-      "SKU": 1083384471710,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 159,
-    "fields": {
-      "name": "Pinot Noir Evening Land",
-      "description": "A terrific Pinot, and one of the few that absolutely demands cellaring. The tannic structure is enormous, providing a sandpapery dryness to the palate. Yet the flavor explosion is so powerful, you can enjoy it now with utter satisfaction. Erupts in grilled blackberry and cherry, Dr. Pepper cola, bacon, anise, saut\u00e9ed wild mushroom and smoky sandalwood flavors, leading to a spicy finish that continues for a full minute. Glorious and decadent. The winemaker was Sashi Moorman, from Stolpman, and the vineyard was planted in 1994 to the Calera clone. Only 115 cases were produced. Drink now\u20132017.",
-      "price": 150.0,
-      "SKU": 7162627269121,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 166,
-    "fields": {
-      "name": "Pinot Noir W.H. Smith",
-      "description": "The first thoughts on this wine are how young it is, and how much potential it shows. The immaturity lies in the primary fruit, acidic character, like a big gulp of fruity cola. But the wine's awesome future is in its vast complexity and balance, and the way it dominates the palate and lasts and lasts. A blend of several vineyards, it's high in acidity, with massive cherry, pomegranate, rhubarb preserve, licorice, earthy mushroom and cedar flavors. So balanced and dry, so elegant and powerful, so silky and complex, it is quite simply a very great Pinot Noir, and an early indication that the vintage on the far Sonoma Coast may be the greatest ever. Tasted twice.",
-      "price": 52.0,
-      "SKU": 5636509992508,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 167,
-    "fields": {
-      "name": "Cabernet Sauvignon Von Strasser",
-      "description": "So enormously delicious, it will be hard to keep from drinking this gorgeous Cabernet right away, and that's just fine. It's composed of the most intensly concentrated flavors of blueberries and blackberries\u2014dense, pure and slightly heady with a liqueur-like alcohol. The tannins are classic Diamond Mountain, firm and minerally, while oak plays the perfect role of the buttered toast and sweetly charred supporting character. Despite its immediate attraction, it's best cellared for 6\u20138 years, at the very least. Fans of old Cabernets will still be loving it in 2029.",
-      "price": 70.0,
-      "SKU": 6281815897928,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 172,
-    "fields": {
-      "name": "Pinot Noir Evening Land",
-      "description": "A terrific Pinot, and one of the few that absolutely demands cellaring. The tannic structure is enormous, providing a sandpapery dryness to the palate. Yet the flavor explosion is so powerful, you can enjoy it now with utter satisfaction. Erupts in grilled blackberry and cherry, Dr. Pepper cola, bacon, anise, saut\u00e9ed wild mushroom and smoky sandalwood flavors, leading to a spicy finish that continues for a full minute. Glorious and decadent. The winemaker was Sashi Moorman, from Stolpman, and the vineyard was planted in 1994 to the Calera clone. Only 115 cases were produced. Drink now\u20132017.",
-      "price": 150.0,
-      "SKU": 1162135310257,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 177,
-    "fields": {
-      "name": "Sparkling Blend Iron Horse",
-      "description": "Aged on the lees for 13 years, this wine has developed stunning creaminess and complexity. Made from 60% Pinot Noir and 40% Chardonnay, it shows a hazelnut smokiness, with fantastically rich, subtle layers of limes, apples, tangerine zest, minerals and yeast. There's a honeyed richness to the finish, which balances high acidity, making it feel dry. A tremendous brut that should develop for years to come. Now\u20132020, in a cool cellar. Production was 50 cases.",
-      "price": 147.0,
-      "SKU": 3731363290859,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 182,
-    "fields": {
-      "name": "Bordeaux-style Red Blend BOND",
-      "description": "This year's Matriarch is very similar to Harlan Estate in structure, and in some ways, a superior wine, or at least more delicious now. Shows the most beautiful black currant, cedar, blueberry pie and Asian spice flavors. What makes the structure so gorgeous are the firm tannins. Ultimately, it's a refined, exquisite red wine. Hard to imagine a better one for drinking over the next decade, and just shows that price sometimes has no relationship to quality.",
-      "price": 90.0,
-      "SKU": 5101534003892,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 183,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Often considered the iconic Cayuse wine, this bears the cartoonish label with the leering frog, though it is a single-vineyard offering like the others. Initially showing some fat and sweetness, it is supple and textural, with the density that comes from a mix of flavors: pain grill\u00e9, smoke, umami, fungus, coffee grounds and dark fruits. A richly organic compendium of scents and flavors, with black tea tannins.",
-      "price": 75.0,
-      "SKU": 3040893686078,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 184,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This is the best of the winery's new releases, both for drinking now and for cellaring. Combines power and elegance, with upscale flavors of cherries, currants, cola, rhubarbs, dried herbs and oak, wrapped into devastatingly rich tannins and a perfect touch of acidity. Should age well for 10 years.",
-      "price": 100.0,
-      "SKU": 2575540952220,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 185,
-    "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "This initially tastes like young fruit, herbal, with a lot of stem and flower flavors, but with some heat at 16% alcohol. Nonetheless it's delicious, compact, enormously fruity, focused and flat out amazing. A perfect mix of flesh, fruit, earth, and typicity from this unique vineyard.",
-      "price": 120.0,
-      "SKU": 9164555386139,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 190,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "Aromatic and invited, almost jet black in color, this single-vineyard offering is a pungent mix of blood orange, rosemary and cassis. Dense and focused, compact and layered, it is structured very much like a Cabernet, but with a full palette (and palate) of Syrah fruit flavors.",
-      "price": 65.0,
-      "SKU": 1203710298887,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 192,
-    "fields": {
-      "name": "Cabernet Sauvignon Cayuse",
-      "description": "This En Chamberlin vineyard offering has never been better. Simply spectacular Cabernet Sauvignon, pure and focused and textural and terroirdriven. A low yield, pure varietal wine, it is immensely concentrated, deeply flavored with cassis, cherry, and berry fruit that is substantial and detailed, with a light dappling of dried herb, chocolate powder, licorice and dark, earthy components typical of Cayuse.",
-      "price": 70.0,
-      "SKU": 5923255091012,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 193,
-    "fields": {
-      "name": "Pinot Noir Goldeneye",
-      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
-      "price": 100.0,
-      "SKU": 1524748384046,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 196,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Pretty as all get-out, this wine is a floral masterpiece\u2014a study in coastal rose and forest scents with a counterpunch of white pepper that leaves one wanting more. Juicy raspberry, strawberry and tangerine flavors are seasoned in allspice and tobacco, the palate so beautifully delicate yet fully realized in savory complexity and length.",
-      "price": 75.0,
-      "SKU": 2165176184276,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 198,
-    "fields": {
-      "name": "Pinot Noir Goldeneye",
-      "description": "This is a best barrel blend of Goldeneye's several vineyards. It takes its beautifully ripe fruit from Confluence and the tannins of The Narrows to yield a dry, densely constructed and moderately ageable wine of exceptionally high quality and appeal. Blackberries, blueberries, cherries and exotic spices characterize the flavors of this tremendous wine, one of the best of the vintage out of the Anderson Valley. Only 222 cases were produced.",
-      "price": 100.0,
-      "SKU": 1032408636932,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 202,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Figgins",
-      "description": "The second release of Figgins\u2014a single wine produced by Leonetti's Chris Figgins\u2014is astonishing. Tasted in a lineup of exceptional Walla Walla reds, it outshined them all. It's a sophisticated blend of Cabernet Sauvignon, Petit Verdot and Merlot, from the Figgins Vineyard, with gorgeous aromas of flowers, spices and black fruits. Seamless and long, complex and forceful without being overpowering, it can stand alongside top tier Bordeaux costing four or five times as much.",
-      "price": 85.0,
-      "SKU": 6150977227632,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 206,
-    "fields": {
-      "name": "Chardonnay Flowers",
-      "description": "Let the conversations about minerality begin. Whatever it is, or wherever it comes from, it's here big time, adding a lick of steel and a metallic mouthfeel to the underlying fruit. And what powerful fruit it is, ranging from orange and guava to honeydew and citron. This bone dry, crisp Chardonnay is a game changer that will make you look at California Chardonnay differently.",
-      "price": 70.0,
-      "SKU": 7750036241899,
-      "is_available": true,
-      "image": "/images/withe_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 210,
-    "fields": {
-      "name": "Syrah Cayuse",
-      "description": "The wine begins to change immediately; as soon as the cork is pulled the bouquet emerges and begins to evolve. Thin layers of scent and flavor are stacked, with rose petals on top, then supremely dense with darker layers of smoke, graphite, ash, mushroom, black fruits. The tannins never stick out and the flavors just keep on going, bringing in cured meats, mocha, and on and on.",
-      "price": 70.0,
-      "SKU": 5607927573012,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 211,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Dazzles with richness, offering waves of candied, tart raspberry and cherry fruit, Dr. Pepper, exotic Indian spice, rose petal and sandalwood flavors, as well as undefinable feral things. Absolutely dry and high in acidity, with overwhelming complexity, it's a milestone. Drink now through 2014; could go way beyond.",
-      "price": 72.0,
-      "SKU": 3893615004498,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 213,
-    "fields": {
-      "name": "Chardonnay Dutton-Goldfield",
-      "description": "The cold and fog actually helped this Chardonnay, which achieves a remarkable delicacy and tartness despite the power of its fruit. Really remarkable for the flood of golden mango, Asian pear and Key lime pie richness, which is grounded by a firm minerality. Oak influence and aging on the lees lend the perfect touches of smoky, buttered toast and zesty creaminess to this dry, polished wine. A mere 587 cases were produced.",
-      "price": 50.0,
-      "SKU": 3973250378900,
-      "is_available": true,
-      "image": "/images/withe_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 214,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Williams Selyem expresses the intricacies of this vineyard with more consistency than any other winery. This remarkably intellectual, ageworthy wine is bone dry, with marked acidity and complexity. The flavors range from wild cherries, cola and balsam to raspberry tart and buttered cinnamon toast. Its complexity is like a mandala, increasing in beauty the longer one examines it. A softly tannic bitterness lingers on the finish; drink 2019\u20132030.",
-      "price": 95.0,
-      "SKU": 7395546726995,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 215,
-    "fields": {
-      "name": "Cabernet Sauvignon Joseph Phelps",
-      "description": "Price be damned, this is an authentically gorgeous, important Cabernet Sauvignon. It calls to mind the amazing 2001, with its huge, perfect tannins and acids and artistic appliqu\u00e9 of new oak. But the star of the show surely is the fruit. Mounds of ripe blackberries and cherries pile up, veering into currants and cassis and something wild and decadently animal, like charred meat. Fabulous now despite the firm tannins, and should evolve for many years.",
-      "price": 225.0,
-      "SKU": 3772055872176,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 217,
-    "fields": {
-      "name": "Pinot Noir Failla",
-      "description": "This is an astonishingly good Pinot Noir that immediately shows the Sonoma Coast virtues of dryness, acidity, firm minerality, complexity and age worthiness. Flavors abound, with dominating notes of sour cherry, persimmon, cinnamon spice and sweet oak. It's rich and refined, pure, and a great expression of the cool 2010 vintage. Drink now\u20132020.",
-      "price": 60.0,
-      "SKU": 6644731492394,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 220,
-    "fields": {
-      "name": "Cabernet Sauvignon Janzen",
-      "description": "This wine will divide aficionados. Some will find it too soft and fruity. Others will marvel at its sheer deliciousness. It's fantastically rich, a wine of deliriously decadent flavors, ranging from blackberry jam and cr\u00e8me de cassis to mocha, blueberry extract and buttered cinnamon toast. Yes, it's soft, but it's the softness of fine velvet. After all that richness, the finish is amazingly dry. Drink over the next few years to enjoy its youthful beauty.",
-      "price": 135.0,
-      "SKU": 7969478952739,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 221,
-    "fields": {
-      "name": "Bordeaux-style Red Blend BOND",
-      "description": "Very refined, with lovely perfume. Heady, showing currants, cassis, cedar, chocolate-covered cherries and sweet herbs. Decadent, classy, elegant, with a great tannin structure. Just oozes class.",
-      "price": 275.0,
-      "SKU": 8379573535531,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 226,
-    "fields": {
-      "name": "Syrah K Vintners",
-      "description": "From Northridge Vineyard grapes, this mix of four clones spent more than two years in barrel. Tremendous depth and complexity are apparent on the nose, and there is no let-down on the palate. It's a seriously powerful wine, with muscle and magic. It opens generously into beautifully integrated layers of ripe fruit, confection, candied rind, cacao and a finishing touch of minerality.",
-      "price": 70.0,
-      "SKU": 1004726104520,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 229,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This is a Pinot Noir of considerable force. Your first impression is of irrepressible power, with masses of fruit punching through an overlay of tannin and oak. Then the flavors fantail out, suggesting cherries, cola, currants and spices that are rich and complex through the long finish. For all its richness, the wine retains an agreeable delicacy of texture. Comprised of lots selected by winemaker Bob Cabral for this anniversary bottling, it's right up there with Williams Selyem's best 2010 Pinots, and just as ageable. Drink now\u20132022. The wine is only available as part of a two-pack from the winery for $250; the other bottle is the 2010 Morning Dew Ranch Pinot Noir, from Anderson Valley.",
-      "price": 125.0,
-      "SKU": 4297411258903,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 230,
-    "fields": {
-      "name": "Cabernet Sauvignon Alpha Omega",
-      "description": "Awesome Cabernet from this esteemed vineyard in Oakville. Defines the modern Napa style in the perfectly ripe black currant and blackberry fruit, and the ultra-refined tannins. Hard to exaggerate the depth and length, the sheer opulence of this 100% Cab. It was aged in 80% new French oak, which adds even richer notes of wood smoke and sweet vanilla. Should evolve slowly through 2020, but only 75 cases were produced.",
-      "price": 130.0,
-      "SKU": 8065635951479,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 231,
-    "fields": {
-      "name": "Cabernet Sauvignon Betz Family",
-      "description": "This P\u00e8re de Famille is 85% Cabernet Sauvignon, with the rest split between Merlot and Petit Verdot. Sweet, pure fruit\u2014black currants and black cherry and blackberry\u2014is packed tight, concentrated and polished, but needing hours to breathe open. Dense, dusty, complex, complicated, this wine is sophisticated beyond description.",
-      "price": 60.0,
-      "SKU": 1290953790833,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 234,
-    "fields": {
-      "name": "Pinot Noir Goldeneye",
-      "description": "A spectacular Pinot, continuing a string of great vintages from this little vineyard. The year 2007 gave California supernaturally rich but balanced Pinot Noirs, and this is one of them. It's sensational, offering broad, exotic fruit flavors, pinpointed with exotic spices, and exquisitely highlighted with French oak. Truly fine, this small-production wine should age over the next 6\u20138 years.",
-      "price": 75.0,
-      "SKU": 1036951623391,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 235,
-    "fields": {
-      "name": "Chardonnay Ramey",
-      "description": "This wine is deliciously elegant yet decadently rich in all the right ways, from a prime, longtime vineyard source planted to vines over 40 years old. Honeyed apple comes to the fore amid lush, formidable layers of complexity and high-minded pursuit, never getting bogged down, the minerality perfectly pitched and the oak fully integrated.",
-      "price": 65.0,
-      "SKU": 7141616568279,
-      "is_available": true,
-      "image": "/images/withe_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 237,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "This is beautifully lilting in preciously defined aromas of rose petal and wild strawberry. From there, it's all subtlety and ethereal elegance. The wine is restrained, nurtured in a basket of nutmeg and graham cracker, as well as freshly packed mushroomy earth. This wine is a stunner right out of the glass, but is sure to continue its fine course through 2022\u20132025.",
-      "price": 59.0,
-      "SKU": 6791245793666,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 238,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "A brilliant wine. Racy in acidity, silky in texture, yet powerful, it exudes the essence of Pinot Noir's greatness. Shows great fruity ripeness in the cherry, Dr. Pepper cola, licorice and bacon flavors, and also a wild, forest quality of grilled mushrooms, thyme and fennel. Absolutely dry, with a firm spine of tannins, the structure is near perfect. A divine expression of Hirsch, and a good candidate for six years in the cellar.",
-      "price": 72.0,
-      "SKU": 7905827973906,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 239,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Blackbird Vineyards",
-      "description": "A spectacular wine that gets better and better with every sip. It's dramatic from the get-go, with rich, fine tannins framing extraordinarily good flavors of blackberries, black currants, anise, dark chocolate and cedar. Superb structure, great length and finish, with perfect acidity. A joy to drink. Now\u20132016.",
-      "price": 90.0,
-      "SKU": 4887195623459,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 240,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Not showing well now due to the tannins. It's dry and tough, with a resistance to the richness. Yet the core of flavor is enormous. Shows concentrated, flashy flavors of cherry marmalade, raspberry, orange blossom, cola, licorice, rose tea and spices that go on and on and continue to develop in the glass. The texture is pure silk and satin. Needs 4\u20136 years to develop, and could go beyond that.",
-      "price": 78.0,
-      "SKU": 5204417254065,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 241,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Always one of Williams Selyem's top Pinot Noirs, the 2007 is a spectacular wine. The vines are the closest to the river in the famed Rochioli vineyard, and the resulting wine always has an elegant structure and fruity accessibility that make it drinkable at a younger age. Showing rich flavors of cherries, red currants, cola, bacon, anise, Asian spices and smoky oak, it will develop beautifully over the next decade.",
-      "price": 75.0,
-      "SKU": 7013026485974,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 245,
-    "fields": {
-      "name": "Pinot Noir Sea Smoke",
-      "description": "This very dense, tannic Pinot Noir represents a triumph for both the winery, the vintage and the region it represents. A multi-clone blend (hence the name) with high, cool-climate acidity and aged in 100% new oak, it's still young, fresh and tight. The astringency throws a cloak over the raspberries, cherries, rosehip tea and Indian spice flavors, which reveal themselves only reluctantly. But they're there, in an imposing texture of velvet and silk. This enormous wine demands time. The window seems to be 2012\u20132015.",
-      "price": 80.0,
-      "SKU": 2720539949533,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 250,
-    "fields": {
-      "name": "Syrah Charles Smith",
-      "description": "Killer juice. It has it all\u2014focus, depth, detail and power. Spice and herb, punch and power, wrapped into a wine with bright, tight berry fruit and layer upon layer of earth, rock and herb. It surpasses the ability of language to describe it. But it needs time\u2014a lot of time.",
-      "price": 120.0,
-      "SKU": 8885498869668,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 253,
-    "fields": {
-      "name": "Bordeaux-style Red Blend Harlan Estate",
-      "description": "Massive, decadent. Opens with extraordinary aromas of cedar, black currants, cherries, chocolate, sage, pepper and anise, with hints of roasted game. Feels very round, smooth but powerful. Almost sweet in red and black currants and chocolate. So refined, absolutely delicious. Beautiful, lush, complex, soft. Should age.",
-      "price": 150.0,
-      "SKU": 9975866833506,
-      "is_available": true,
-      "image": null,
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 255,
-    "fields": {
-      "name": "Cabernet Sauvignon Krutz",
-      "description": "This is really a spectacular wine. It's hard to say why it's so superior to Krutz's 2005 bottling, but it's richer and more elegant in every respect. Combines immense power with great finesse. The refined essence of blackberries, black currants and spices thrills the palate, accented with the most beautiful coating of smoky oak. A great achievement that should develop in the bottle through 2018.",
-      "price": 70.0,
-      "SKU": 6623774626249,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 264,
-    "fields": {
-      "name": "Pinot Noir Williams Selyem",
-      "description": "Not showing well now due to the tannins. It's dry and tough, with a resistance to the richness. Yet the core of flavor is enormous. Shows concentrated, flashy flavors of cherry marmalade, raspberry, orange blossom, cola, licorice, rose tea and spices that go on and on and continue to develop in the glass. The texture is pure silk and satin. Needs 4\u20136 years to develop, and could go beyond that.",
-      "price": 78.0,
-      "SKU": 8852587440353,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 265,
-    "fields": {
-      "name": "Cabernet Sauvignon Napa Angel",
-      "description": "From Chilean winemaker, Aurelio Montes, this 100% Cabernet shows massively concentrated flavors of ripe blackberries and cassis, with richer notes of dark chocolate, anise, spices and smoky cedar. What an amazing tannin structure, intricate, fine and complex. A wine to drink now for sheer opulence or to age for at least a dozen years.",
-      "price": 90.0,
-      "SKU": 6364030601523,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 278,
-    "fields": {
-      "name": "Syrah Qup\u00e9",
-      "description": "Fantastic, fabulous, a stupendously good Syrah that shows off Bien Nacido at its most perfect. Totally dry, with sturdy but ultra-refined tannins, it displays massive waves of blackberries, black currants, blueberries, smoked meat, violets, sandalwood and black pepper. Just beginning to find its groove, it should develop for many years.",
-      "price": 95.0,
-      "SKU": 4743173127463,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 279,
-    "fields": {
-      "name": "Pinot Noir Lynmar",
-      "description": "This important Pinot Noir is expensive, but it is absolutely worth a search. It's not a single-vineyard wine, but a blend of various blocks from the cooler southern part of the valley. Oak, to the tune of 70% new, is very strong in char and vanilla, but way stronger is the fruit itself, which is exemplary and stunning. Raspberries, cherries and strawberries just begin to describe it, with all sorts of spice and earth complexities. Stuns with purity, complexity and sheer delicious power. Great now, and will easily develop over the next 6\u20138 years.",
-      "price": 100.0,
-      "SKU": 1929483682255,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 280,
-    "fields": {
-      "name": "Pinot Noir Melville",
-      "description": "Combines a delicate, floral lightness with a potent intricacy to produce a wine of vast intellectual interest. Dry and somewhat tannic, and crisp in tangy acidity, this small-production Pinot features tiers of tart red cherries, rosehip tea, cola, mint, lavender, anise and pepper, edged with the honeyed sweetness of smoky, glazed oak. A tremendous achievement, and the wine of the vintage.",
-      "price": 52.0,
-      "SKU": 4331000431856,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 281,
-    "fields": {
-      "name": "Cabernet Sauvignon Krutz",
-      "description": "This is really a spectacular wine. It's hard to say why it's so superior to Krutz's 2005 bottling, but it's richer and more elegant in every respect. Combines immense power with great finesse. The refined essence of blackberries, black currants and spices thrills the palate, accented with the most beautiful coating of smoky oak. A great achievement that should develop in the bottle through 2018.",
-      "price": 70.0,
-      "SKU": 2941512663637,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 288,
-    "fields": {
-      "name": "Cabernet Sauvignon Yao Ming",
-      "description": "The former basketball star's initial release immediately establishes itself among the elite Cabernets of Napa Valley. Made from mountain vineyards on Atlas Peak and benches in the Rutherford appellation, it combines intensity with elegance. Bursts with upfront, delicious blackberry, cr\u00e8me de cassis and dark chocolate flavors that are wildly sweet on the midpalate, but then finish thoroughly dry. Structure comes by way of a tangy minerality and finely laced tannins. This is one of those wines that is softly decadent from start to finish, although it's probably not one to hold much beyond six years.",
-      "price": 625.0,
-      "SKU": 9958226213381,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 290,
-    "fields": {
-      "name": "Cabernet Sauvignon Napa Angel",
-      "description": "From Chilean winemaker, Aurelio Montes, this 100% Cabernet shows massively concentrated flavors of ripe blackberries and cassis, with richer notes of dark chocolate, anise, spices and smoky cedar. What an amazing tannin structure, intricate, fine and complex. A wine to drink now for sheer opulence or to age for at least a dozen years.",
-      "price": 90.0,
-      "SKU": 9186576222334,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 294,
-    "fields": {
-      "name": "Chardonnay Rochioli",
-      "description": "A spectacular Chardonnay\u2014this is dazzingly beautiful and mesmerizing in its appeal. The complexity of flavor stuns, offering tiers of pineapples, oranges, green apples and golden mangoes. Then the oaky influences appear in the form of buttered toast and caramel, with a suggestion of honey. The finish is dry and crisp in acidity.",
-      "price": 60.0,
-      "SKU": 9013761078272,
-      "is_available": true,
-      "image": "/images/withe_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 295,
-    "fields": {
-      "name": "Red Blend Ridge",
-      "description": "Without doubt this is a wine to cellar. It's massive in flavor, with the purist blackcurrant and cassis fruit you can imagine, and the huge plaster of sweet oak is perfectly balanced. Then there are the tannins. They're fine and complex, but gritty. There's an astringency throughout that a great steak will cut through, but it would be infanticide to open this before, say, 2010. Should improve through 2020 and beyond.",
-      "price": 120.0,
-      "SKU": 6849972183841,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 297,
-    "fields": {
-      "name": "Cabernet Sauvignon Diamond Creek",
-      "description": "The most complete and compelling of Diamond Creek's trio of '02s, combining the opulent accessibility of Gravelly Meadow with the power and authority of Volcanic Hill. The aromas of cassis, red currants, cedar, tobacco and cigar box lead to massively packed Cabernet flavors wrapped in huge, dusty tannins. The wine is so balanced, so distinguished and complete. Decant now if you must drink it, but it should start to mellow by 2008, and then peak and hold through 2015 at least.",
-      "price": 175.0,
-      "SKU": 8816516857971,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 298,
-    "fields": {
-      "name": "Cabernet Sauvignon JCB",
-      "description": "An outstanding wine, the best California Cabernet Jean-Charles Boisset has ever produced from any of his properties. It stands out in any tasting of its peers. Made from 100% Cabernet Sauvignon, and aged in 60% new oak, it shows satisfying, complex flavors of blackberries, blueberries, cassis, hazelnut-infused chocolate and spices. Hard to exaggerate its power and grace. Wonderful now and for a good six years, but it's difficult to predict its evolution beyond 2018.",
-      "price": 150.0,
-      "SKU": 6507218720277,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 299,
-    "fields": {
-      "name": "Pinot Noir Sea Smoke",
-      "description": "This very dense, tannic Pinot Noir represents a triumph for both the winery, the vintage and the region it represents. A multi-clone blend (hence the name) with high, cool-climate acidity and aged in 100% new oak, it's still young, fresh and tight. The astringency throws a cloak over the raspberries, cherries, rosehip tea and Indian spice flavors, which reveal themselves only reluctantly. But they're there, in an imposing texture of velvet and silk. This enormous wine demands time. The window seems to be 2012\u20132015.",
-      "price": 80.0,
-      "SKU": 3685862309069,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 304,
-    "fields": {
-      "name": "Cabernet Sauvignon Caymus",
-      "description": "So delicious now, you can hardly keep your hands off it. Blackberry tart, ripe blueberry, cassis, milk chocolate, licorice and sweet, smoky cedar flavors flood the mouth, dramatically huge and memorable, and lasting long into the finish. The tannins are obvious, but sweetly ripe and soft. A brilliant evocation of Napa Cabernet, despite a high production level of nearly 30,000 cases, which is about the same size as a Bordeaux first growth. Shows the class and potency this bottling has exhibited for many years, and believe it or not, the price is a relative bargain these days. Drink now\u20132020.",
-      "price": 130.0,
-      "SKU": 9689331561092,
-      "is_available": true,
-      "image": "/images/red_wine.jpg",
-      "created_at": "2020-01-01T00:00:00.000Z",
-      "updated_at": "2020-01-02T00:00:00.000Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 306,
-    "fields": {
       "name": "Pinot Noir Williams Selyem",
       "description": "A drop-dead gorgeous Pinot Noir that will satisfy everyone from Burgundy fans to diehard Cabernet cultists. Show an elegant complexity and silky texture that define great California Pinot Noir, yet with a powerful impact that emphasizes raspberries, cherries and blueberries. Brilliant acidity and tannins provide the perfect framework on this wine that's drinkable now, and will develop over the next 15\u201320 years.",
       "price": 82.0,
-      "SKU": 6158104501583,
+      "SKU": 1440345569114,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 98,
+      "discount": 5,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 98,
+    "fields": {
+      "quantity": 32,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
   },
   {
     "model": "products.product",
-    "pk": 307,
+    "pk": 99,
     "fields": {
       "name": "Pinot Noir Sequana",
       "description": "This distinctive Pinot Noir's source is a tiny vineyard in cool Green Valley; the winegrower is James MacPhail, whose own MacPhail Pinot Noirs are so good. The wine itself is totally dry and silky and firm in acidity, yet soft in fine tannins. You might call it noble. It's eruptive in cherries, sweet smoky bacon, raspberry granola and oaky sandalwood. Gorgeous, seductive and brilliant, a truly great Pinot Noir that's impeccable now.",
       "price": 50.0,
-      "SKU": 5423299406286,
+      "SKU": 9187978385163,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 99,
+      "discount": 3,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 99,
+    "fields": {
+      "quantity": 8,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }
   },
   {
     "model": "products.product",
-    "pk": 310,
+    "pk": 100,
     "fields": {
       "name": "Pinot Noir Williams Selyem",
       "description": "Always one of Williams Selyem's top Pinot Noirs, the 2007 is a spectacular wine. The vines are the closest to the river in the famed Rochioli vineyard, and the resulting wine always has an elegant structure and fruity accessibility that make it drinkable at a younger age. Showing rich flavors of cherries, red currants, cola, bacon, anise, Asian spices and smoky oak, it will develop beautifully over the next decade.",
       "price": 75.0,
-      "SKU": 1775045143901,
+      "SKU": 1223337447966,
       "is_available": true,
-      "image": "/images/red_wine.jpg",
+      "image": "products/red_wine.jpeg",
+      "created_at": "2020-01-01T00:00:00.000Z",
+      "updated_at": "2020-01-02T00:00:00.000Z",
+      "inventory_id": 100,
+      "discount": 2,
+      "total_rating": 0.0
+    }
+  },
+  {
+    "model": "products.ProductInventory",
+    "pk": 100,
+    "fields": {
+      "quantity": 48,
       "created_at": "2020-01-01T00:00:00.000Z",
       "updated_at": "2020-01-02T00:00:00.000Z"
     }

@@ -1,6 +1,6 @@
 # django
 from django.contrib.auth import get_user_model
-from rest_framework.mixins import CreateModelMixin, DestroyModelMixin, ListModelMixin
+from rest_framework.mixins import CreateModelMixin, DestroyModelMixin, ListModelMixin, RetrieveModelMixin
 from rest_framework.permissions import IsAuthenticated
 
 # rest_framework
@@ -27,7 +27,7 @@ class UserAddressViewSet(ModelViewSet):
         serializer.save(user=self.request.user)
 
 
-class UserPaymentViewSet(GenericViewSet, ListModelMixin, CreateModelMixin, DestroyModelMixin):
+class UserPaymentViewSet(GenericViewSet, ListModelMixin, CreateModelMixin, DestroyModelMixin, RetrieveModelMixin):
     serializer_class = UserPaymentSerializer
     permission_classes = [IsAuthenticated, IsOwner]
 

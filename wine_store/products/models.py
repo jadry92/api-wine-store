@@ -78,7 +78,7 @@ class Product(models.Model):
 class ProductReview(models.Model):
     """ProductReview model."""
 
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.TextField()
     rating = models.FloatField(default=0)
@@ -93,4 +93,4 @@ class ProductReview(models.Model):
 
     def __str__(self):
         """Return product name."""
-        return self.product.name
+        return f"{self.review} - {self.rating}"

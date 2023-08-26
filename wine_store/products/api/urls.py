@@ -3,13 +3,17 @@ URLs for the products app endpoint.
 """
 
 # Django
-from django.urls import path
+
+
+# Rest Framework
+from rest_framework.routers import SimpleRouter
 
 # Views
-from wine_store.products.api.views import ProductListView
+from wine_store.products.api.views import ProductReviewView, ProductView
 
-app_name = "products"
+route = SimpleRouter()
+route.register(r"", ProductView, basename="wines")
+route.register(r"(?P<wine_pk>[^/.]+)/reviews", ProductReviewView, basename="wine-reviews")
+app_name = "wines"
 
-urlpatterns = [
-    path("", view=ProductListView.as_view(), name="list"),
-]
+urlpatterns = route.urls
