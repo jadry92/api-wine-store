@@ -11,10 +11,12 @@ from django.views.generic import TemplateView
 from rest_framework.routers import SimpleRouter
 
 # Users
-from wine_store.users.api.views import UserAddressViewSet
+from wine_store.users.api.views import UserAddressViewSet, UserPaymentViewSet
 
 router = SimpleRouter()
 router.register(r"address", UserAddressViewSet, basename="address")
+
+router.register(r"payment", UserPaymentViewSet, basename="payment")
 
 urlpatterns = [
     path("auth/", include("dj_rest_auth.urls")),

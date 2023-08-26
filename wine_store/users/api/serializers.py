@@ -8,7 +8,7 @@ from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
 # User
-from wine_store.users.models import UserAddress
+from wine_store.users.models import UserAddress, UserPayment
 
 User = get_user_model()
 
@@ -30,5 +30,12 @@ class RegisterSerializerCustom(RegisterSerializer):
 class UserAddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserAddress
+        fields = "__all__"
+        read_only_fields = ["user"]
+
+
+class UserPaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPayment
         fields = "__all__"
         read_only_fields = ["user"]
