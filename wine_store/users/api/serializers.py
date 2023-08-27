@@ -1,11 +1,15 @@
 # dj_rest_auth
 from dj_rest_auth.registration.serializers import RegisterSerializer
+from dj_rest_auth.serializers import LoginSerializer
 
 # Django
 from django.contrib.auth import get_user_model
 
 # Rest Framework
 from rest_framework import serializers
+
+# Cart
+from wine_store.cart.models import Cart
 
 # User
 from wine_store.users.models import UserAddress, UserPayment
@@ -39,3 +43,13 @@ class UserPaymentSerializer(serializers.ModelSerializer):
         model = UserPayment
         fields = "__all__"
         read_only_fields = ["user"]
+
+
+class LoginSerializerCustom(LoginSerializer):
+    def validate(self, attrs):
+        attrs = super().validate(attrs)
+        user = attrs["user"]
+        cart = Cart.objects.get(user=user)
+        if cart is None:
+            cart = Cart.objects.create(user=user)
+        return attrs

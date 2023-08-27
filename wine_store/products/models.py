@@ -60,8 +60,10 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_available = models.BooleanField(default=True)
-    discount = models.ForeignKey(ProductDiscount, on_delete=models.SET_NULL, null=True, blank=True)
-    inventory = models.OneToOneField(ProductInventory, on_delete=models.CASCADE)
+    discount = models.ForeignKey(
+        ProductDiscount, on_delete=models.SET_NULL, null=True, blank=True, related_name="products"
+    )
+    inventory = models.OneToOneField(ProductInventory, on_delete=models.CASCADE, related_name="product")
     total_rating = models.FloatField(default=0, null=True, blank=True)
 
     class Meta:
@@ -79,7 +81,7 @@ class ProductReview(models.Model):
     """ProductReview model."""
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviews")
     review = models.TextField()
     rating = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)

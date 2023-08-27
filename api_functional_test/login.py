@@ -16,7 +16,7 @@ def login(username, password):
     login_url = f"{URL}/users/auth/login/"
     data = {"username": username, "password": password}
     headers = {"Content-Type": "application/json"}
-    response = post_http(headers, login_url, json.dumps(data))
+    response = post_http(headers, login_url, json.dumps(data), verbose=True)
     return response.get("key")
 
 

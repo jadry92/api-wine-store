@@ -275,6 +275,7 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_ADAPTER = "wine_store.users.adapters.RegisterAdapter"
 # jd_rest_auth
 REST_AUTH = {
+    "LOGIN_SERIALIZER": "wine_store.users.api.serializers.LoginSerializerCustom",
     "REGISTER_SERIALIZER": "wine_store.users.api.serializers.RegisterSerializerCustom",
 }
 
