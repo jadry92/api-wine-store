@@ -13,15 +13,16 @@ from django.utils.translation import gettext_lazy as _
 from wine_store.products.models import Product
 
 # User
-from wine_store.users.models import User
+from wine_store.users.models import User, UserAddress, UserPayment
 
 
 class OrderDetail(models.Model):
     """OrderDetail model."""
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    shipping_address = models.CharField(max_length=255)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="orders")
+    shipping_address = models.ForeignKey(UserAddress, on_delete=models.SET_NULL, related_name="orders", null=True)
     total = models.DecimalField(max_digits=10, decimal_places=2)
+    order_status = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -39,8 +40,8 @@ class OrderDetail(models.Model):
 class OrderItem(models.Model):
     """OrderItem model."""
 
-    order_detail = models.ForeignKey(OrderDetail, on_delete=models.CASCADE)
-    product = models.OneToOneField(Product, on_delete=models.CASCADE)
+    order_detail = models.ForeignKey(OrderDetail, on_delete=models.CASCADE, related_name="items")
+    product = models.OneToOneField(Product, on_delete=models.CASCADE, related_name="order_items")
     quantity = models.PositiveIntegerField(default=1)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
@@ -58,9 +59,10 @@ class OrderItem(models.Model):
 class OrderPayment(models.Model):
     """OrderPayment model."""
 
-    order_detail = models.OneToOneField(OrderDetail, on_delete=models.CASCADE)
+    order_detail = models.OneToOneField(OrderDetail, on_delete=models.CASCADE, related_name="payment")
     total = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_method = models.CharField(max_length=255)
+    payment_method = models.OneToOneField(UserPayment, on_delete=models.SET_NULL, related_name="order", null=True)
+    payment_register = models.CharField(max_length=255, unique=True)
     payment_status = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
