@@ -1,6 +1,6 @@
 import json
-from random import randint
 
+from login import login
 from utils import get_http, post_http
 
 URL = "http://localhost:8000/api"
@@ -27,19 +27,28 @@ def get_items(token):
     return response
 
 
+def logout(token):
+    header = {"Content-Type": "application/json", "Authorization": f"Token {token}"}
+    url = f"{URL}/users/auth/logout/"
+    response = post_http(header, url, json.dumps({}), verbose=True)
+    return response
+
+
 def main():
     user_data = {}
-    with open("api_functional_test/user_login_data.json") as f:
+    with open("api_functional_test/poll_users_data.json") as f:
         user_data = json.load(f)
-
-    keys = list(user_data.keys())
-    token = user_data[keys[randint(0, len(keys) - 1)]]["token"]
-    get_card(token)
-    get_items(token)
-    items_ids = [randint(1, 100) for _ in range(5)]
-    for item_id in items_ids:
-        data = {"product": item_id, "quantity": randint(1, 10)}
-        add_item(token, data)
+    username = "smelloy2m"
+    password = [user_data[i]["password"] for i in range(len(user_data)) if user_data[i]["username"] == username][0]
+    token = login(username, password)
+    # cart = get_card(token)
+    data = {"product": 1, "quantity": 64}
+    add_item(token, data)
+    logout(token)
+    # items_ids = [randint(1, 100) for _ in range(5)]
+    # for item_id in items_ids:
+    #     data = {"product": item_id, "quantity": randint(1, 10)}
+    #     add_item(token, data)
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ from rest_framework.viewsets import GenericViewSet, ModelViewSet
 
 # users
 from wine_store.users.api.serializers import UserAddressSerializer, UserPaymentSerializer
-from wine_store.users.models import UserAddress
+from wine_store.users.models import UserAddress, UserPayment
 
 # utils
 from wine_store.utils.permissions import IsOwner
@@ -32,7 +32,7 @@ class UserPaymentViewSet(GenericViewSet, ListModelMixin, CreateModelMixin, Destr
     permission_classes = [IsAuthenticated, IsOwner]
 
     def get_queryset(self):
-        return UserAddress.objects.filter(user=self.request.user)
+        return UserPayment.objects.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

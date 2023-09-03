@@ -2,8 +2,6 @@
 Cart Serializers
 """
 
-# Django
-from django.db.models import F, Sum
 
 # Django REST Framework
 from rest_framework.serializers import ModelSerializer
@@ -36,25 +34,6 @@ class CartItemSerializer(ModelSerializer):
         model = CartItem
         fields = "__all__"
         read_only_fields = ["cart"]
-
-    def create(self, validate_data):
-        cart_item = CartItem.objects.create(**validate_data)
-        cart = Cart.objects.filter(user=self.context["request"].user).first()
-        cart.total += cart_item.product.price * cart_item.quantity
-        cart.save()
-        return cart_item
-
-    def update(self, instance, validated_data):
-        cart_item = super().update(instance, validated_data)
-        cart = Cart.objects.filter(user=self.context["request"].user).first()
-        all_items = (
-            CartItem.objects.filter(cart=cart)
-            .annotate(value=F("product__price") * F("quantity"))
-            .aggregate(total=Sum("value"))
-        )
-        cart.total = all_items["total"]
-        cart.save()
-        return cart_item
 
 
 class CartModelSerializer(ModelSerializer):

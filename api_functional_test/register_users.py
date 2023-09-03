@@ -1,6 +1,5 @@
 # Utils
 import json
-import time
 
 from utils import post_http
 
@@ -23,7 +22,7 @@ def register_user(username, email, password, first_name, last_name):
 
 
 def main():
-    with open("api_functional_test/user_data.json") as f:
+    with open("api_functional_test/poll_users_data.json") as f:
         users = json.load(f)
         for user in users:
             register_user(
@@ -33,7 +32,6 @@ def main():
                 user.get("first_name"),
                 user.get("last_name"),
             )
-            time.sleep(1)
 
 
 if __name__ == "__main__":

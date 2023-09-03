@@ -2,7 +2,7 @@ import hashlib
 import json
 from random import randint
 
-from utils import post_http
+from utils import get_http, post_http
 
 URL = "http://localhost:8000/api"
 
@@ -36,4 +36,17 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    token = "a1d58517e93b0ed316ef2b47a74bfe984654aff8"
+    header = {"Content-Type": "application/json", "Authorization": "Token " + token}
+    res = get_http(header, "http://localhost:8000/api/users/payment/", verbose=True)
+    username = "ndrewett1s"
+    provider = PROVIDERS[randint(0, len(PROVIDERS) - 1)]
+    blop = username + provider + str(randint(0, 1000000))
+    data = {
+        "payment_method": hashlib.sha256(blop.encode()).hexdigest(),
+        "provider": provider,
+        "default": True,
+    }
+    if len(res) == 0:
+        create_payment_method(data, token)

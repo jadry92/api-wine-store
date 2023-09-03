@@ -12,6 +12,8 @@ from rest_framework.routers import SimpleRouter
 from wine_store.cart.api.views import CartItemViewSet, CartViewSet
 
 router = SimpleRouter()
-router.register(r"items", CartItemViewSet, basename="cart_items")
+router.register(r"items", CartItemViewSet, basename="items")
 
-urlpatterns = [path("", CartViewSet.as_view({"get": "get"}))] + router.urls
+urlpatterns = [
+    path("", CartViewSet.as_view({"get": "get"})),
+] + router.urls

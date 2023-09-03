@@ -49,7 +49,5 @@ class LoginSerializerCustom(LoginSerializer):
     def validate(self, attrs):
         attrs = super().validate(attrs)
         user = attrs["user"]
-        cart = Cart.objects.get(user=user)
-        if cart is None:
-            cart = Cart.objects.create(user=user)
+        cart, created = Cart.objects.get_or_create(user=user)
         return attrs
