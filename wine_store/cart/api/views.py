@@ -73,3 +73,9 @@ class CartItemViewSet(ModelViewSet):
         """Update cart item."""
         cart = Cart.objects.filter(user=self.request.user).first()
         serializer.save(cart=cart)
+
+    def perform_destroy(self, instance):
+        """Delete cart item."""
+        instance.delete()
+        instance.cart.calculate_total()
+        instance.cart.save()
