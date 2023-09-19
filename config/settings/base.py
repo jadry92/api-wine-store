@@ -299,6 +299,13 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "Documentation of API endpoints of Wine Store",
     "VERSION": "1.0.0",
     "SERVE_PERMISSIONS": ["rest_framework.permissions.IsAdminUser"],
+    "CONTACT": {"name": "Johan Suarez Largo", "email": "johan@jsuarez.dev"},
+    "SERVERS": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Local server",
+        }
+    ],
 }
 # django-webpack-loader
 # ------------------------------------------------------------------------------

@@ -22,12 +22,21 @@ class Cart(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def calculate_total(self):
+        """Calculate total price of cart items."""
+        total = 0
+        for item in self.items.all():
+            total += item.product.price * item.quantity
+        self.total = total
+        self.save()
+        return total
+
 
 class CartItem(models.Model):
     """CartItem Model."""
 
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name="items")
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="cart_items")
-    quantity = models.IntegerField(default=1)
+    quantity = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

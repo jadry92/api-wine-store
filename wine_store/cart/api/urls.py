@@ -15,5 +15,5 @@ router = SimpleRouter()
 router.register(r"items", CartItemViewSet, basename="items")
 
 urlpatterns = [
-    path("", CartViewSet.as_view({"get": "get"})),
+    path("", CartViewSet.as_view({"get": "get", "delete": "delete"})),
 ] + router.urls
