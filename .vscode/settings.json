@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "postgres",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "wine_store",
+      "database": "wine_store",
+      "username": "SvuCYfHrKizkDqgiPnEJGDOYXmPRBOgU",
+      "password": "wPKS5SuYFMcABMA7dILvGrrxtgRG4DUELDCcMFxw1ERTZnmMkDXDMVayXHh6dbak"
+    }
+  ]
+}

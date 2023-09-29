@@ -31,14 +31,14 @@ class RegisterSerializerCustom(RegisterSerializer):
         }
 
 
-class UserAddressSerializer(serializers.ModelSerializer):
+class UserAddressModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserAddress
         fields = "__all__"
         read_only_fields = ["user"]
 
 
-class UserPaymentSerializer(serializers.ModelSerializer):
+class UserPaymentModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserPayment
         fields = "__all__"
