@@ -1,6 +1,6 @@
 """
 Order models.
-- OrderDetail
+- Order
 - OrderItem
 - OrderPayment
 """
@@ -13,8 +13,8 @@ from django.utils.translation import gettext_lazy as _
 from wine_store.users.models import User, UserAddress
 
 
-class OrderDetail(models.Model):
-    """OrderDetail model."""
+class Order(models.Model):
+    """Order model."""
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="orders")
     shipping_address = models.ForeignKey(UserAddress, on_delete=models.SET_NULL, related_name="orders", null=True)
@@ -44,7 +44,7 @@ class OrderDetail(models.Model):
 class OrderPayment(models.Model):
     """OrderPayment model."""
 
-    order = models.OneToOneField(OrderDetail, on_delete=models.CASCADE, related_name="payment")
+    order = models.OneToOneField(Order, on_delete=models.CASCADE, related_name="payment")
     total = models.DecimalField(max_digits=10, decimal_places=2)
     payment_provider = models.CharField(max_length=255)
     payment_register = models.CharField(max_length=255, unique=True, null=True)
@@ -66,7 +66,7 @@ class OrderPayment(models.Model):
 class OrderItem(models.Model):
     """OrderItem model."""
 
-    order_detail = models.ForeignKey(OrderDetail, on_delete=models.CASCADE, related_name="items")
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
     SKU = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     quantity = models.PositiveIntegerField(default=1)

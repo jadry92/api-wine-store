@@ -2,10 +2,9 @@
     Order Serializers
 """
 
+# Utils
 import hashlib
 from random import randint
-
-# Utils
 from time import sleep
 
 # Rest Framework
@@ -16,7 +15,7 @@ from wine_store.cart.api.serializers import CartModelSerializer
 from wine_store.cart.models import CartItem
 
 # Order
-from wine_store.orders.models import OrderDetail, OrderItem, OrderPayment
+from wine_store.orders.models import Order, OrderItem, OrderPayment
 from wine_store.users.api.serializers import UserAddressModelSerializer
 
 # User
@@ -29,7 +28,7 @@ class OrderModelSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta options."""
 
-        model = OrderDetail
+        model = Order
         fields = "__all__"
         read_only_fields = ["user", "total", "order_status", "created_at", "updated_at"]
 
@@ -42,7 +41,7 @@ class OrderItemModelSerializer(serializers.ModelSerializer):
 
         model = OrderItem
         fields = "__all__"
-        read_only_fields = ["order_detail", "product", "quantity", "price"]
+        read_only_fields = ["order", "product", "quantity", "price"]
 
 
 class OrderPaymentModelSerializer(serializers.ModelSerializer):
@@ -53,7 +52,7 @@ class OrderPaymentModelSerializer(serializers.ModelSerializer):
 
         model = OrderPayment
         fields = "__all__"
-        read_only_fields = ["order_detail", "total", "payment_method"]
+        read_only_fields = ["order", "total", "payment_method"]
 
 
 class OrderReadModelSerializer(serializers.ModelSerializer):
@@ -67,7 +66,7 @@ class OrderReadModelSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta options."""
 
-        model = OrderDetail
+        model = Order
         fields = "__all__"
         read_only_fields = ["user", "total", "order_status", "created_at", "updated_at"]
 
@@ -106,13 +105,14 @@ class OrderSerializer(serializers.Serializer):
         """Create order."""
         user_payment = validated_data.pop("user_payment")
         # Create order detail
-        order = OrderDetail.objects.create(**validated_data)
+        order = Order.objects.create(**validated_data)
         # Create order items
         items = self.context["items"]
         for item in items:
             OrderItem.objects.create(
-                order_detail=order,
-                product=item.product,
+                order=order,
+                name=item.product.name,
+                SKU=item.product.SKU,
                 quantity=item.quantity,
                 price=item.price,
             )
@@ -121,9 +121,9 @@ class OrderSerializer(serializers.Serializer):
         order.save()
         payment_status, payment_register = self.make_request_payment(user_payment, order.total)
         OrderPayment.objects.create(
-            order_detail=order,
+            order=order,
             total=order.total,
-            payment_method=user_payment,
+            payment_provider=user_payment.payment_provider,
             payment_register=payment_register,
             payment_status=payment_status,
         )
@@ -132,7 +132,18 @@ class OrderSerializer(serializers.Serializer):
 
     def update(self, instance, validated_data):
         """Update order."""
-        pass
+        # update order address
+        instance.shipping_address = validated_data.get("shipping_address", instance.shipping_address)
+        instance.save()
+        # try payment again
+        if instance.payment.payment_status == "FAILED":
+            user_payment = validated_data.pop("user_payment")
+            payment_status, payment_register = self.make_request_payment(user_payment, instance.total)
+            instance.payment.payment_register = payment_register
+            instance.payment.payment_status = payment_status
+            instance.payment.save()
+
+        return instance
 
     def make_request_payment(self, user_payment, total):
         """Make request payment.
